@@ -10,7 +10,7 @@ public class Check : MonoBehaviour
     {
         
     }
-
+    //주석한줄달아봄
     // Update is called once per frame
     void Update()
     {
