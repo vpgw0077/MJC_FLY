@@ -23,7 +23,7 @@ public class PlayerMove_PGW : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+       Move();
         Jump();
 
     }
@@ -32,23 +32,24 @@ public class PlayerMove_PGW : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //rb.velocity = Vector3.zero;
-            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            rb.velocity = Vector3.zero;
+            rb.velocity = Vector2.up * JumpForce;
         }
     }
 
     private void Move()
     {
-        positionX = positionX + 0.005f;
+        positionX = positionX + 0.04f;
         tr.position = new Vector2(positionX, tr.position.y);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Trigger"))
+        if (collision.transform.CompareTag("Item"))
         {
-            tr.position = originpos;
-            rb.velocity = Vector3.zero;
+            rb.velocity = Vector2.up * 20f;
         }
     }
+
+
 }
