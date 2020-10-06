@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PiayerConroller : MonoBehaviour
 {
-    Rigidbody rigid;
+    Rigidbody2D rigid;
 
     [SerializeField]
     private float power;
 
     public void Awake()
     {
-        rigid = GetComponent<Rigidbody>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     // Start is called before the first frame update
@@ -30,6 +30,12 @@ public class PiayerConroller : MonoBehaviour
         }
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Item"))
+        {
+            rigid.velocity = Vector2.up * 20f;
+        }
+    }
 
 }
