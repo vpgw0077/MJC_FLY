@@ -36,6 +36,18 @@ public class PiayerConroller : MonoBehaviour
         {
             rigid.velocity = Vector2.up * 20f;
         }
-    }
+        else if (collision.transform.CompareTag("Ground"))
+        {
+            GameController_PGW.instance.GameOver(true);
+        }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Coin"))
+        {
+            Coin_PGW getcoin = collision.GetComponent<Coin_PGW>();
+            GameController_PGW.instance.AddCoin(getcoin.CoinAmount);
+        }
+    }
 }
