@@ -10,7 +10,7 @@ public class PiayerConroller : MonoBehaviour
     private float power;
 
     Upgrade instance;
-
+    CoinManager theCoin;
 
      int JumpCount;
 
@@ -23,6 +23,7 @@ public class PiayerConroller : MonoBehaviour
     void Start()
     {
         instance = Upgrade.instance;
+        theCoin = FindObjectOfType<CoinManager>();
         JumpCount = instance.MaxJumpCount;
         
     }
@@ -59,8 +60,8 @@ public class PiayerConroller : MonoBehaviour
     {
         if (collision.CompareTag("Coin"))
         {
-            Coin_PGW getcoin = collision.GetComponent<Coin_PGW>();
-            GameController_PGW.instance.AddCoin(getcoin.CoinAmount);
+            Coin_PGW thecoin = collision.GetComponent<Coin_PGW>();
+            theCoin.AddCoin(thecoin.CoinAmount);
         }
     }
 }

@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
 
-    public Text CoinText;
-
-    int CurrentCoin;
     int TotalCoin;
 
     void Awake()
@@ -20,7 +18,6 @@ public class GameController_PGW : MonoBehaviour
 
             GameData_PGW gameData = GameData_PGW.Load();
             TotalCoin = gameData.TotalCoin;
-            CoinText.text = "코인 : " + CurrentCoin.ToString();
 
         }
         else if (instance != this)
@@ -34,16 +31,15 @@ public class GameController_PGW : MonoBehaviour
     {
         if (isOver)
         {
-            TotalCoin += CurrentCoin;
+            TotalCoin += CoinManager.CurrentCoin;
             Debug.Log("총 코인량은 " + TotalCoin + "개 입니다.");
         }
     }
 
 
-    public void AddCoin(int coin)
+    public void GameStart()
     {
-        CurrentCoin += coin;
-        CoinText.text = "코인 : " + CurrentCoin.ToString();
+        SceneManager.LoadScene("Repeat");
     }
 
     private void OnApplicationQuit()

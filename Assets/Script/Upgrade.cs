@@ -22,7 +22,7 @@ public class Upgrade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MaxJumpCount += 4;
+        MaxJumpCount += 9999;
         WindPower = 10f;
     }
 
