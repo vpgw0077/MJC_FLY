@@ -9,6 +9,11 @@ public class PiayerConroller : MonoBehaviour
     [SerializeField]
     private float power;
 
+    Upgrade instance;
+
+
+     int JumpCount;
+
     public void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -17,16 +22,24 @@ public class PiayerConroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        instance = Upgrade.instance;
+        JumpCount = instance.MaxJumpCount;
+        
     }
 
     // Update is called once per frame
     void Update()
 
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+    }
+
+    public void TryJump()
+    {
+        if(JumpCount > 0)
         {
             rigid.velocity = Vector2.up * power;
+            JumpCount -= 1;
         }
     }
 
@@ -34,7 +47,7 @@ public class PiayerConroller : MonoBehaviour
     {
         if (collision.transform.CompareTag("Item"))
         {
-            rigid.velocity = Vector2.up * 20f;
+            rigid.velocity = Vector2.up * instance.WindPower;
         }
         else if (collision.transform.CompareTag("Ground"))
         {
