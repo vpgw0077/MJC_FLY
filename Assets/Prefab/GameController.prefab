@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7202763691127378129}
   - component: {fileID: 7202763691127378130}
   - component: {fileID: 7202763691127378128}
+  - component: {fileID: 663779080}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -44,7 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1315cf3c351a748a1f34505119ef48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinText: {fileID: 0}
 --- !u!114 &7202763691127378128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,3 +59,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxJumpCount: 0
   WindPower: 0
+--- !u!114 &663779080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202763691127378131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 270dbf66bb89019468c244924078e01e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterPage: {fileID: 0}
+  ItemPage: {fileID: 0}
+  PaymentPage: {fileID: 0}
+  ShopPage: {fileID: 0}

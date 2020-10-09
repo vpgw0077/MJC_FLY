@@ -6,13 +6,14 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 [Serializable]
-public class GameData_PGW
+public class GameData_PGW 
 {
     public int TotalCoin;
 
     public GameData_PGW(int Coin)
     {
         this.TotalCoin = Coin;
+        
     }
     public void Save()
     {

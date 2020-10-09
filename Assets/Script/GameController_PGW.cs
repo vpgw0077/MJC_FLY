@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
-
     int TotalCoin;
 
     void Awake()
@@ -15,7 +14,6 @@ public class GameController_PGW : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-
             GameData_PGW gameData = GameData_PGW.Load();
             TotalCoin = gameData.TotalCoin;
 
@@ -27,12 +25,17 @@ public class GameController_PGW : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        Debug.Log(TotalCoin);
+    }
+
     public void GameOver(bool isOver)
     {
         if (isOver)
         {
             TotalCoin += CoinManager.CurrentCoin;
-            Debug.Log("총 코인량은 " + TotalCoin + "개 입니다.");
+
         }
     }
 
@@ -40,6 +43,12 @@ public class GameController_PGW : MonoBehaviour
     public void GameStart()
     {
         SceneManager.LoadScene("Repeat");
+    }
+
+    public void Back()
+    {
+        instance.GameOver(true);
+        SceneManager.LoadScene("MainTitle");
     }
 
     private void OnApplicationQuit()
@@ -50,4 +59,5 @@ public class GameController_PGW : MonoBehaviour
 
         gameData.Save();
     }
+    
 }

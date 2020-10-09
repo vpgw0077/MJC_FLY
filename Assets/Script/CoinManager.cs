@@ -11,7 +11,9 @@ public class CoinManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        CurrentCoin = 0;
         CoinText.text = "코인 : " + CurrentCoin.ToString();
+        
     }
 
     public void AddCoin(int coin)
