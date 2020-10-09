@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
-    int TotalCoin;
+    public int TotalCoin;
 
     void Awake()
     {
@@ -35,7 +35,7 @@ public class GameController_PGW : MonoBehaviour
         if (isOver)
         {
             TotalCoin += CoinManager.CurrentCoin;
-
+            SceneManager.LoadScene("MainTitle");
         }
     }
 
@@ -55,7 +55,7 @@ public class GameController_PGW : MonoBehaviour
     {
 
         GameData_PGW gameData = new GameData_PGW(TotalCoin);
-
+        
 
         gameData.Save();
     }
