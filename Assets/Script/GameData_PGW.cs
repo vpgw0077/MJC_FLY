@@ -5,33 +5,35 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-[Serializable]
-public class GameData_PGW 
+
+public static class GameData_PGW 
 {
-    public int TotalCoin;
-
-    public GameData_PGW(int Coin)
+    public static void Save(SaveData data)
     {
-        this.TotalCoin = Coin;
-        
-    }
-    public void Save()
-    {
-        FileStream fileStream = new FileStream("Fly.dat", FileMode.Create);
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Path.Combine(Application.persistentDataPath, "FLY.bin");
+        FileStream stream = File.Create(path);
 
-        binaryFormatter.Serialize(fileStream, this);
-        fileStream.Close();
+        formatter.Serialize(stream, data);
+        stream.Close();
     }
 
-    //불러오기
-    public static GameData_PGW Load()
+    public static SaveData Load()
     {
-        FileStream fileStream = new FileStream("Fly.dat", FileMode.Open);
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        try
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            string path = Path.Combine(Application.persistentDataPath, "FLY.bin");
+            FileStream stream = File.OpenRead(path);
+            SaveData data = (SaveData)formatter.Deserialize(stream);
+            stream.Close();
+            return data;
+        }
+        catch(Exception e)
+        {
+            Debug.Log(e.Message);
+            return default;
+        }
 
-        GameData_PGW gameData = (GameData_PGW)binaryFormatter.Deserialize(fileStream);
-
-        return gameData;
     }
 }

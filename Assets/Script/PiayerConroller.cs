@@ -9,7 +9,6 @@ public class PiayerConroller : MonoBehaviour
     [SerializeField]
     private float power;
 
-    Upgrade instance;
     CoinManager theCoin;
 
      int JumpCount;
@@ -17,14 +16,21 @@ public class PiayerConroller : MonoBehaviour
     public void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = Upgrade.instance;
         theCoin = FindObjectOfType<CoinManager>();
-        JumpCount = instance.MaxJumpCount;
+        if (GameController_PGW.instance.MaxJumpCount < 2)
+        {
+            JumpCount = 1;
+        }
+        else
+        {
+        JumpCount = GameController_PGW.instance.MaxJumpCount;
+        }
         
     }
 
@@ -48,7 +54,7 @@ public class PiayerConroller : MonoBehaviour
     {
         if (collision.transform.CompareTag("Item"))
         {
-            rigid.velocity = Vector2.up * instance.WindPower;
+            rigid.velocity = Vector2.up * 10f;
         }
         else if (collision.transform.CompareTag("Ground"))
         {

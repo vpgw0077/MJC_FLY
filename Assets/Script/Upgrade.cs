@@ -6,8 +6,9 @@ public class Upgrade : MonoBehaviour
 {
     public static Upgrade instance;
 
-
-    public int MaxJumpCount;
+    public int Cost;
+    public int Grade;
+    public int MaxJumpCount = 0;
     public float WindPower;
 
     float UpgradeForce = 1.2f;
@@ -22,7 +23,8 @@ public class Upgrade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MaxJumpCount += 9999;
+
+        MaxJumpCount += 1;
         WindPower = 10f;
     }
 
@@ -30,5 +32,18 @@ public class Upgrade : MonoBehaviour
     {
         WindPower *= UpgradeForce;
     }
+
+    public void JumpUpgrade()
+    {
+        if(GameController_PGW.instance.TotalCoin >= Cost)
+        {
+            print("FFFF");
+            GameController_PGW.instance.TotalCoin -= Cost;
+            Grade += 1;
+            GameController_PGW.instance.Grade = Grade;
+            GameController_PGW.instance.SaveData();
+        }
+    }
+
 
 }

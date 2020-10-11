@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
+    public int Grade;
+    public int MaxJumpCount;
     public int TotalCoin;
 
     void Awake()
@@ -14,8 +16,7 @@ public class GameController_PGW : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            GameData_PGW gameData = GameData_PGW.Load();
-            TotalCoin = gameData.TotalCoin;
+            LoadData();
 
         }
         else if (instance != this)
@@ -35,6 +36,7 @@ public class GameController_PGW : MonoBehaviour
         if (isOver)
         {
             TotalCoin += CoinManager.CurrentCoin;
+            SaveData();
             SceneManager.LoadScene("MainTitle");
         }
     }
@@ -51,13 +53,28 @@ public class GameController_PGW : MonoBehaviour
         SceneManager.LoadScene("MainTitle");
     }
 
+    public void SaveData()
+    {
+        SaveData save = new SaveData();
+        save.TotalCoin = TotalCoin;
+        save.Grade = Grade;
+        save.MaxJumpCount = MaxJumpCount;
+        GameData_PGW.Save(save);
+    }
+
+    public void LoadData()
+    {
+        SaveData save = GameData_PGW.Load();
+        Grade = save.Grade;
+        TotalCoin = save.TotalCoin;
+        MaxJumpCount = save.MaxJumpCount;
+    }
+
     private void OnApplicationQuit()
     {
 
-        GameData_PGW gameData = new GameData_PGW(TotalCoin);
-        
+        GameOver(true);
 
-        gameData.Save();
     }
-    
+
 }
