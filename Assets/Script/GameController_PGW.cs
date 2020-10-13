@@ -7,8 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
-    public int Grade;
+
+    public int JumpGrade;
     public int MaxJumpCount;
+
+    public int ItemGrade;
+    public float WindForce;
+
     public int TotalCoin;
 
     void Awake()
@@ -57,17 +62,21 @@ public class GameController_PGW : MonoBehaviour
     {
         SaveData save = new SaveData();
         save.TotalCoin = TotalCoin;
-        save.Grade = Grade;
+        save.JumpGrade = JumpGrade;
         save.MaxJumpCount = MaxJumpCount;
+        save.ItemGrade = ItemGrade;
+        save.WindForce = WindForce;
         GameData_PGW.Save(save);
     }
 
     public void LoadData()
     {
         SaveData save = GameData_PGW.Load();
-        Grade = save.Grade;
+        JumpGrade = save.JumpGrade;
         TotalCoin = save.TotalCoin;
         MaxJumpCount = save.MaxJumpCount;
+        ItemGrade = save.ItemGrade;
+        WindForce = save.WindForce;
     }
 
     private void OnApplicationQuit()

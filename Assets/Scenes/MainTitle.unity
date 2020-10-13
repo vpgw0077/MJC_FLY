@@ -300,7 +300,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
@@ -378,7 +378,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
@@ -387,7 +387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC810\uD504 \uC5C5\uADF8\uB808\uC774\uB4DC"
+  m_Text: 
 --- !u!222 &137708095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +855,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 1
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
@@ -901,7 +901,7 @@ RectTransform:
   m_GameObject: {fileID: 1033197907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3, y: 6, z: 1}
   m_Children:
   - {fileID: 643786595}
   m_Father: {fileID: 8940784004024340935}
@@ -954,7 +954,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1033197910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1633515099617350107}
+        m_MethodName: TryItemUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1033197910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1031,7 @@ RectTransform:
   m_GameObject: {fileID: 1052079483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3, y: 6, z: 1}
   m_Children:
   - {fileID: 96431815}
   m_Father: {fileID: 8940784004024340935}
@@ -1704,7 +1715,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1633515099617350107}
-        m_MethodName: JumpUpgrade
+        m_MethodName: TryJumpUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1771,7 +1782,7 @@ RectTransform:
   m_GameObject: {fileID: 1944210104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3, y: 6, z: 1}
   m_Children:
   - {fileID: 137708081}
   m_Father: {fileID: 8940784004024340935}
@@ -2008,10 +2019,14 @@ MonoBehaviour:
   PaymentShop: {fileID: 8940784003357718877}
   JumpUpgradeBtn: {fileID: 1944210086}
   JumpText: {fileID: 137708094}
+  ItemUpgradeBtn: {fileID: 1033197909}
+  ItemText: {fileID: 643786596}
   CoinCount: {fileID: 92825446150162040}
-  Cost: 0
-  Grade: 0
+  JumpCost: 0
+  JumpGrade: 0
   MaxJumpCount: 0
+  ItemCost: 0
+  ItemGrade: 0
   WindPower: 0
 --- !u!1001 &2043746723116346615
 PrefabInstance:
@@ -2079,6 +2094,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2043746725106433517, guid: c659c046966e4784c9b03c36ee72988d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2043746725106433516, guid: c659c046966e4784c9b03c36ee72988d, type: 3}

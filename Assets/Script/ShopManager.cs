@@ -14,17 +14,24 @@ public class ShopManager : MonoBehaviour
     public Button JumpUpgradeBtn;
     public Text JumpText;
 
+    public Button ItemUpgradeBtn;
+    public Text ItemText;
+
     public Text CoinCount;
 
-    public int Cost;
-    public int Grade;
+    public int JumpCost;
+    public int JumpGrade;
     public int MaxJumpCount = 0;
+
+    public int ItemCost;
+    public int ItemGrade;
     public float WindPower;
 
     private void Start()
     {
 
-        Grade = GameController_PGW.instance.Grade;
+        JumpGrade = GameController_PGW.instance.JumpGrade;
+        ItemGrade = GameController_PGW.instance.ItemGrade;
         UpdateCost();
     }
 
@@ -66,66 +73,121 @@ public class ShopManager : MonoBehaviour
         PaymentShop.SetActive(true);
     }
 
-
-
-    public void JumpUpgrade()
+    public void TryItemUpgrade()
     {
-        if (GameController_PGW.instance.TotalCoin >= Cost && Grade < 3)
+        if (GameController_PGW.instance.TotalCoin >= ItemCost && ItemGrade < 3)
         {
-            JumpGrade();
-            GameController_PGW.instance.TotalCoin -= Cost;
-            GameController_PGW.instance.Grade = Grade;
+            ItemUpGrade();
+            GameController_PGW.instance.TotalCoin -= ItemCost;
+            GameController_PGW.instance.ItemGrade = ItemGrade;
+            GameController_PGW.instance.WindForce = WindPower;
+            GameController_PGW.instance.SaveData();
+        }
+    }
+
+    public void TryJumpUpgrade()
+    {
+        if (GameController_PGW.instance.TotalCoin >= JumpCost && JumpGrade < 3)
+        {
+            JumpUpGrade();
+            GameController_PGW.instance.TotalCoin -= JumpCost;
+            GameController_PGW.instance.JumpGrade = JumpGrade;
             GameController_PGW.instance.MaxJumpCount = MaxJumpCount;
             GameController_PGW.instance.SaveData();
         }
     }
 
-    public void JumpGrade()
+    public void JumpUpGrade()
     {
-        switch (Grade)
+        switch (JumpGrade)
         {
             case 0:
 
                 MaxJumpCount = 2;
-                Grade++;
+                JumpGrade++;
                 break;
 
             case 1:
 
                 MaxJumpCount = 3;
-                Grade++;
+                JumpGrade++;
                 break;
             case 2:
 
                 MaxJumpCount = 4;
-                Grade++;
+                JumpGrade++;
                 break;
 
+        }
+
+
+    }
+    public void ItemUpGrade()
+    {
+        switch (ItemGrade)
+        {
+            case 0:
+
+                WindPower = 20;
+                ItemGrade++;
+                break;
+
+            case 1:
+
+                WindPower = 30;
+                ItemGrade++;
+                break;
+            case 2:
+
+                WindPower = 40;
+                ItemGrade++;
+                break;
 
         }
     }
 
     private void UpdateCost()
     {
-        if (Grade == 0)
+        if (JumpGrade == 0)
         {
-            Cost = 100;
+            JumpCost = 100;
 
         }
-        else if (Grade == 1)
+        else if (JumpGrade == 1)
         {
-            Cost = 200;
+            JumpCost = 200;
         }
-        else if(Grade == 2)
+        else if (JumpGrade == 2)
         {
-            Cost = 400;
+            JumpCost = 400;
         }
 
-        JumpText.text = Cost.ToString() + "$";
-        if (Grade == 3)
+        if (ItemGrade == 0)
+        {
+            ItemCost = 100;
+
+        }
+        else if (ItemGrade == 1)
+        {
+            ItemCost = 200;
+        }
+        else if (ItemGrade == 2)
+        {
+            ItemCost = 400;
+        }
+
+        JumpText.text = "점프 업그레이드 " + JumpCost.ToString() + "$";
+        ItemText.text = "아이템 업그레이드" + ItemCost.ToString() + "$";
+
+        if (JumpGrade == 3)
         {
             JumpText.text = "업그레이드 완료";
             JumpUpgradeBtn.interactable = false;
+        }
+        if (ItemGrade == 3)
+        {
+            ItemText.text = "업그레이드 완료";
+            ItemUpgradeBtn.interactable = false;
         }
 
     }

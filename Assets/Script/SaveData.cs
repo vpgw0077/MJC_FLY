@@ -6,6 +6,9 @@ using UnityEngine;
 public class SaveData
 {
     public int TotalCoin;
-    public int Grade;
+    public int JumpGrade;
     public int MaxJumpCount;
+
+    public int ItemGrade;
+    public float WindForce;
 }

@@ -11,27 +11,39 @@ public class PiayerConroller : MonoBehaviour
 
     CoinManager theCoin;
 
-     int JumpCount;
+    int JumpCount;
+    float WindForce;
 
     public void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
         theCoin = FindObjectOfType<CoinManager>();
+
         if (GameController_PGW.instance.MaxJumpCount < 2)
         {
             JumpCount = 1;
         }
         else
         {
-        JumpCount = GameController_PGW.instance.MaxJumpCount;
+            JumpCount = GameController_PGW.instance.MaxJumpCount;
         }
-        
+
+        if (GameController_PGW.instance.WindForce < 20)
+        {
+            WindForce = 10;
+        }
+        else
+        {
+            WindForce = GameController_PGW.instance.WindForce; 
+        }
+
+
     }
 
     // Update is called once per frame
@@ -43,7 +55,7 @@ public class PiayerConroller : MonoBehaviour
 
     public void TryJump()
     {
-        if(JumpCount > 0)
+        if (JumpCount > 0)
         {
             rigid.velocity = Vector2.up * power;
             JumpCount -= 1;
@@ -54,7 +66,7 @@ public class PiayerConroller : MonoBehaviour
     {
         if (collision.transform.CompareTag("Item"))
         {
-            rigid.velocity = Vector2.up * 10f;
+            rigid.velocity = Vector2.up * WindForce;
         }
         else if (collision.transform.CompareTag("Ground"))
         {

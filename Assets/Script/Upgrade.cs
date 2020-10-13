@@ -40,7 +40,7 @@ public class Upgrade : MonoBehaviour
             print("FFFF");
             GameController_PGW.instance.TotalCoin -= Cost;
             Grade += 1;
-            GameController_PGW.instance.Grade = Grade;
+            GameController_PGW.instance.JumpGrade = Grade;
             GameController_PGW.instance.SaveData();
         }
     }
