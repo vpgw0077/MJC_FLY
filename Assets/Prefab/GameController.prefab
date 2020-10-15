@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2043746725106433515}
   - component: {fileID: 2043746724310697121}
-  - component: {fileID: 2043746725106433516}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -44,17 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1315cf3c351a748a1f34505119ef48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2043746725106433516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043746725106433517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414924175ce8a52458d8e489cc1f1b99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  JumpGrade: 0
   MaxJumpCount: 0
-  WindPower: 0
+  ItemGrade: 0
+  WindForce: 0
+  TotalCoin: 0

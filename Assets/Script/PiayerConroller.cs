@@ -11,7 +11,7 @@ public class PiayerConroller : MonoBehaviour
 
     CoinManager theCoin;
 
-    int JumpCount;
+    public int JumpCount;
     float WindForce = 10f;
 
     public void Awake()
@@ -24,13 +24,11 @@ public class PiayerConroller : MonoBehaviour
     void Start()
     {
         theCoin = FindObjectOfType<CoinManager>();
-        /*
-<<<<<<< Updated upstream
+        
+
 
         if (GameController_PGW.instance.MaxJumpCount < 2)
-=======
-        /*if (GameController_PGW.instance.MaxJumpCount < 2)
->>>>>>> Stashed changes
+
         {
             JumpCount = 1;
         }
@@ -47,13 +45,8 @@ public class PiayerConroller : MonoBehaviour
         {
             WindForce = GameController_PGW.instance.WindForce; 
         }
-<<<<<<< Updated upstream
 
-
-=======
         
->>>>>>> Stashed changes
-        */
     }
 
     // Update is called once per frame
