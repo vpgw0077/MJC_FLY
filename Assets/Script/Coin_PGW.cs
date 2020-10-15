@@ -5,5 +5,5 @@ using UnityEngine;
 public class Coin_PGW : MonoBehaviour
 {
     public int CoinAmount;
-
+   
 }

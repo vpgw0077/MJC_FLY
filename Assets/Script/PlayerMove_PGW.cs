@@ -23,8 +23,8 @@ public class PlayerMove_PGW : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       Move();
-        Jump();
+      
+       Jump();
 
     }
 
@@ -47,7 +47,7 @@ public class PlayerMove_PGW : MonoBehaviour
     {
         if (collision.transform.CompareTag("Item"))
         {
-            rb.velocity = Vector2.up * 20f;
+            rb.velocity = Vector2.up * 10f;
         }
     }
 

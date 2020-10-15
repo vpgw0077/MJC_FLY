@@ -8,6 +8,7 @@ public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
 
+
     public int JumpGrade;
     public int MaxJumpCount;
 
@@ -34,6 +35,12 @@ public class GameController_PGW : MonoBehaviour
     private void Start()
     {
         Debug.Log(TotalCoin);
+       
+    }
+    void Update()
+    {
+
+
     }
 
     public void GameOver(bool isOver)
@@ -57,6 +64,8 @@ public class GameController_PGW : MonoBehaviour
         instance.GameOver(true);
         SceneManager.LoadScene("MainTitle");
     }
+
+
 
     public void SaveData()
     {

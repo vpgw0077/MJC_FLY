@@ -12,7 +12,7 @@ public class PiayerConroller : MonoBehaviour
     CoinManager theCoin;
 
     int JumpCount;
-    float WindForce;
+    float WindForce = 10f;
 
     public void Awake()
     {
@@ -24,8 +24,13 @@ public class PiayerConroller : MonoBehaviour
     void Start()
     {
         theCoin = FindObjectOfType<CoinManager>();
+        /*
+<<<<<<< Updated upstream
 
         if (GameController_PGW.instance.MaxJumpCount < 2)
+=======
+        /*if (GameController_PGW.instance.MaxJumpCount < 2)
+>>>>>>> Stashed changes
         {
             JumpCount = 1;
         }
@@ -42,8 +47,13 @@ public class PiayerConroller : MonoBehaviour
         {
             WindForce = GameController_PGW.instance.WindForce; 
         }
+<<<<<<< Updated upstream
 
 
+=======
+        
+>>>>>>> Stashed changes
+        */
     }
 
     // Update is called once per frame
@@ -62,6 +72,11 @@ public class PiayerConroller : MonoBehaviour
         }
     }
 
+   
+    
+ 
+    
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Item"))
@@ -72,8 +87,9 @@ public class PiayerConroller : MonoBehaviour
         {
             GameController_PGW.instance.GameOver(true);
         }
-
+    
     }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Coin"))
