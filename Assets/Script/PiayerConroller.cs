@@ -89,6 +89,7 @@ public class PiayerConroller : MonoBehaviour
         {
             Coin_PGW thecoin = collision.GetComponent<Coin_PGW>();
             theCoin.AddCoin(thecoin.CoinAmount);
+            collision.gameObject.SetActive(false);
         }
     }
 }

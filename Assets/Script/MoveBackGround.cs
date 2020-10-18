@@ -16,9 +16,9 @@ public class MoveBackGround : MonoBehaviour
     void Update()
     {
         tr.Translate(speed,0,0);
-        if(tr.position.x < -55)
+        if(tr.position.x < -80)
         {
-            tr.position = new Vector3(55f, tr.position.y, 0);
+            tr.position = new Vector3(40f, tr.position.y, 0);
         }
     }
 }
