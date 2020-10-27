@@ -4,10 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public enum Character
+{
+    P1, P2, P3,P4
+}
+
 public class GameController_PGW : MonoBehaviour
 {
     public static GameController_PGW instance = null;
-
+    public bool FirstOn = true;
 
     public int JumpGrade;
     public int MaxJumpCount;
@@ -16,7 +21,9 @@ public class GameController_PGW : MonoBehaviour
     public float WindForce;
 
     public int TotalCoin;
+    public List<PlayerInfo> chars = new List<PlayerInfo>();
 
+    public Character currentCharacter;
     void Awake()
     {
         if (instance == null)
@@ -32,16 +39,7 @@ public class GameController_PGW : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
-    {
-        Debug.Log(TotalCoin);
-       
-    }
-    void Update()
-    {
 
-
-    }
 
     public void GameOver(bool isOver)
     {
@@ -75,17 +73,27 @@ public class GameController_PGW : MonoBehaviour
         save.MaxJumpCount = MaxJumpCount;
         save.ItemGrade = ItemGrade;
         save.WindForce = WindForce;
+        save.playerSkin = currentCharacter;
+        save.chars = chars;
+        save.Firston = FirstOn;
         GameData_PGW.Save(save);
     }
 
     public void LoadData()
     {
         SaveData save = GameData_PGW.Load();
-        JumpGrade = save.JumpGrade;
-        TotalCoin = save.TotalCoin;
-        MaxJumpCount = save.MaxJumpCount;
-        ItemGrade = save.ItemGrade;
-        WindForce = save.WindForce;
+        if (save != null)
+        {
+            JumpGrade = save.JumpGrade;
+            TotalCoin = save.TotalCoin;
+            MaxJumpCount = save.MaxJumpCount;
+            ItemGrade = save.ItemGrade;
+            WindForce = save.WindForce;
+            currentCharacter = save.playerSkin;
+            chars = save.chars;
+            FirstOn = save.Firston;
+
+        }
     }
 
     private void OnApplicationQuit()

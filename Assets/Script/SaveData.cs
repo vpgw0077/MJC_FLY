@@ -11,4 +11,16 @@ public class SaveData
 
     public int ItemGrade;
     public float WindForce;
+
+    public Character playerSkin;
+    public bool Firston;
+
+    public List<PlayerInfo> chars = new List<PlayerInfo>();
+
+}
+[System.Serializable]
+public class PlayerInfo
+{
+    public string PlayerName;
+    public bool isUnlock;
 }

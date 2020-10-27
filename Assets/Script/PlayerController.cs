@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PiayerConroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rigid;
 
@@ -19,11 +19,12 @@ public class PiayerConroller : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
 
     }
-
+    
     // Start is called before the first frame update
     void Start()
     {
         theCoin = FindObjectOfType<CoinManager>();
+
         
 
 
