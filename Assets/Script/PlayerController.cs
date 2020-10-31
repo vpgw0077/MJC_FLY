@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rigid;
-
-    [SerializeField]
-    private float power;
-
+    public Rigidbody2D rigid;
     CoinManager theCoin;
 
-    public int JumpCount;
+
+    float power;
+
     float WindForce = 10f;
 
-    public void Awake()
-    {
-        rigid = GetComponent<Rigidbody2D>();
+    public int JumpCount;
 
-    }
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
+        rigid = GetComponent<Rigidbody2D>();
         theCoin = FindObjectOfType<CoinManager>();
 
-        
+
 
 
         if (GameController_PGW.instance.MaxJumpCount < 2)
@@ -40,14 +37,33 @@ public class PlayerController : MonoBehaviour
 
         if (GameController_PGW.instance.WindForce < 20)
         {
-            WindForce = 10;
+            WindForce = 15;
         }
         else
         {
-            WindForce = GameController_PGW.instance.WindForce; 
+            WindForce = GameController_PGW.instance.WindForce;
         }
 
-        
+        if(GameController_PGW.instance.GravityGrade < 1)
+        {
+            rigid.gravityScale = 3;
+        }
+        else
+        {
+            rigid.gravityScale = GameController_PGW.instance.GravityScale;
+        }
+
+        if(GameController_PGW.instance.JumpPower < 20)
+        {
+            power = 15f;
+
+        }
+        else
+        {
+            power = GameController_PGW.instance.JumpPower;
+        }
+
+
     }
 
     // Update is called once per frame
@@ -66,11 +82,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   
-    
- 
-    
-   
+
+
+
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Item"))
@@ -81,9 +97,9 @@ public class PlayerController : MonoBehaviour
         {
             GameController_PGW.instance.GameOver(true);
         }
-    
+
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Coin"))

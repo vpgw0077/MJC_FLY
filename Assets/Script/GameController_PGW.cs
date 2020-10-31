@@ -20,6 +20,12 @@ public class GameController_PGW : MonoBehaviour
     public int ItemGrade;
     public float WindForce;
 
+    public int GravityGrade;
+    public float GravityScale;
+
+    public int JumpPowerGrade;
+    public float JumpPower;
+
     public int TotalCoin;
     public List<PlayerInfo> chars = new List<PlayerInfo>();
 
@@ -69,10 +75,19 @@ public class GameController_PGW : MonoBehaviour
     {
         SaveData save = new SaveData();
         save.TotalCoin = TotalCoin;
+
         save.JumpGrade = JumpGrade;
         save.MaxJumpCount = MaxJumpCount;
+
         save.ItemGrade = ItemGrade;
         save.WindForce = WindForce;
+
+        save.JumpPowerGrade = JumpPowerGrade;
+        save.JumpPower = JumpPower;
+
+        save.GravityGrade = GravityGrade;
+        save.GravityScale = GravityScale;
+
         save.playerSkin = currentCharacter;
         save.chars = chars;
         save.Firston = FirstOn;
@@ -84,11 +99,20 @@ public class GameController_PGW : MonoBehaviour
         SaveData save = GameData_PGW.Load();
         if (save != null)
         {
-            JumpGrade = save.JumpGrade;
             TotalCoin = save.TotalCoin;
+
+            JumpGrade = save.JumpGrade;
             MaxJumpCount = save.MaxJumpCount;
+
             ItemGrade = save.ItemGrade;
             WindForce = save.WindForce;
+
+            JumpPowerGrade = save.JumpPowerGrade;
+            JumpPower = save.JumpPower;
+
+            GravityGrade = save.GravityGrade;
+            GravityScale = save.GravityScale;
+
             currentCharacter = save.playerSkin;
             chars = save.chars;
             FirstOn = save.Firston;

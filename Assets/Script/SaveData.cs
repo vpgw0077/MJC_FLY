@@ -7,10 +7,14 @@ public class SaveData
 {
     public int TotalCoin;
     public int JumpGrade;
-    public int MaxJumpCount;
-
+    public int JumpPowerGrade;
+    public int GravityGrade;
     public int ItemGrade;
+
+    public int MaxJumpCount;
     public float WindForce;
+    public float JumpPower;
+    public float GravityScale;
 
     public Character playerSkin;
     public bool Firston;
