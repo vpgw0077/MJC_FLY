@@ -66,13 +66,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-
-    {
-
-    }
-
     public void TryJump()
     {
         if (JumpCount > 0)
@@ -81,10 +74,6 @@ public class PlayerController : MonoBehaviour
             JumpCount -= 1;
         }
     }
-
-
-
-
 
 
     private void OnCollisionEnter2D(Collision2D collision)
