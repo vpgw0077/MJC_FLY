@@ -53,6 +53,7 @@ public class GameController_PGW : MonoBehaviour
         {
             TotalCoin += CoinManager.CurrentCoin;
             SaveData();
+            AdMobManager.instance.ShowFrontAd();
             SceneManager.LoadScene("MainTitle");
         }
     }
