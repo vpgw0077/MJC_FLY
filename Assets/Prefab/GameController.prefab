@@ -43,8 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1315cf3c351a748a1f34505119ef48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FirstOn: 1
   JumpGrade: 0
   MaxJumpCount: 0
   ItemGrade: 0
   WindForce: 0
+  GravityGrade: 0
+  GravityScale: 0
+  JumpPowerGrade: 0
+  JumpPower: 0
   TotalCoin: 0
+  chars: []
+  currentCharacter: 0

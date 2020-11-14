@@ -136,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
   JumpCount: 0
+  sound_Jump: Jump
+  sound_Coin: Coin
 --- !u!1 &4582990871206955943
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4582990871206955943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.85, y: 0, z: -9}
+  m_LocalPosition: {x: 0.85, y: 0, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4582990869649274032}

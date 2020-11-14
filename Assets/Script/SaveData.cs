@@ -19,6 +19,9 @@ public class SaveData
     public Character playerSkin;
     public bool Firston;
 
+    public bool BgmOn;
+    public bool SfxOn;
+
     public List<PlayerInfo> chars = new List<PlayerInfo>();
 
 }

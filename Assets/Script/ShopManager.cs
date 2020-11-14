@@ -53,7 +53,7 @@ public class ShopManager : MonoBehaviour
 
     private void Update()
     {
-        CoinCount.text = "코인 : " + GameController_PGW.instance.TotalCoin.ToString();
+        CoinCount.text = " X " + GameController_PGW.instance.TotalCoin.ToString();
         UpdateCost();
     }
     public void OpenShop()

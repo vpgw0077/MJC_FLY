@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     float WindForce = 10f;
 
     public int JumpCount;
+    public string sound_Jump;
+    public string sound_Coin;
 
 
 
@@ -44,7 +46,7 @@ public class PlayerController : MonoBehaviour
             WindForce = GameController_PGW.instance.WindForce;
         }
 
-        if(GameController_PGW.instance.GravityGrade < 1)
+        if (GameController_PGW.instance.GravityGrade < 1)
         {
             rigid.gravityScale = 3;
         }
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
             rigid.gravityScale = GameController_PGW.instance.GravityScale;
         }
 
-        if(GameController_PGW.instance.JumpPower < 20)
+        if (GameController_PGW.instance.JumpPower < 20)
         {
             power = 15f;
 
@@ -71,6 +73,7 @@ public class PlayerController : MonoBehaviour
         if (JumpCount > 0)
         {
             rigid.velocity = Vector2.up * power;
+            SoundManager.instance.PlaySE(sound_Jump);
             JumpCount -= 1;
         }
     }
@@ -78,11 +81,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Item"))
-        {
-            rigid.velocity = Vector2.up * WindForce;
-        }
-        else if (collision.transform.CompareTag("Ground"))
+
+        if (collision.transform.CompareTag("Ground"))
         {
             GameController_PGW.instance.GameOver(true);
         }
@@ -96,6 +96,12 @@ public class PlayerController : MonoBehaviour
             Coin_PGW thecoin = collision.GetComponent<Coin_PGW>();
             theCoin.AddCoin(thecoin.CoinAmount);
             collision.gameObject.SetActive(false);
+            SoundManager.instance.PlaySE(sound_Coin);
+        }
+        else if (collision.transform.CompareTag("Item"))
+        {
+            SoundManager.instance.PlaySE(sound_Jump);
+            rigid.velocity = Vector2.up * WindForce;
         }
     }
 }

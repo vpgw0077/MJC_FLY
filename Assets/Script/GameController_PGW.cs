@@ -30,6 +30,9 @@ public class GameController_PGW : MonoBehaviour
     public List<PlayerInfo> chars = new List<PlayerInfo>();
 
     public Character currentCharacter;
+
+    public bool BgmOn;
+    public bool SfxOn;
     void Awake()
     {
         if (instance == null)
@@ -92,6 +95,10 @@ public class GameController_PGW : MonoBehaviour
         save.playerSkin = currentCharacter;
         save.chars = chars;
         save.Firston = FirstOn;
+
+        save.BgmOn = BgmOn;
+        save.SfxOn = SfxOn;
+
         GameData_PGW.Save(save);
     }
 
@@ -117,6 +124,9 @@ public class GameController_PGW : MonoBehaviour
             currentCharacter = save.playerSkin;
             chars = save.chars;
             FirstOn = save.Firston;
+
+            BgmOn = save.BgmOn;
+            SfxOn = save.SfxOn;
 
         }
     }
