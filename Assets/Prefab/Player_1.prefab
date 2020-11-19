@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4582990869649274038}
   - component: {fileID: 4582990869649274037}
   - component: {fileID: 4582990869649274036}
+  - component: {fileID: 3686746207666881800}
   m_Layer: 0
   m_Name: Player_1
   m_TagString: Player
@@ -138,6 +139,25 @@ MonoBehaviour:
   JumpCount: 0
   sound_Jump: Jump
   sound_Coin: Coin
+--- !u!95 &3686746207666881800
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582990869649274043}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7bea3bd35aa7d7f4a91f6e4ad81ccff0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4582990871206955943
 GameObject:
   m_ObjectHideFlags: 0
