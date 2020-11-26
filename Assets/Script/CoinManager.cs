@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour
 {
-
+    public static CoinManager instance;
     public Text CoinText;
 
     public static int CurrentCoin;
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {

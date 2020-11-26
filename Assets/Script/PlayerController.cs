@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigid;
-    CoinManager theCoin;
-
 
     float power;
 
@@ -14,7 +12,8 @@ public class PlayerController : MonoBehaviour
 
     public int JumpCount;
     public string sound_Jump;
-    public string sound_Coin;
+
+    public GameObject MagnetZone;
 
 
 
@@ -22,7 +21,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        theCoin = FindObjectOfType<CoinManager>();
 
 
 
@@ -91,17 +89,24 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Coin"))
-        {
-            Coin_PGW thecoin = collision.GetComponent<Coin_PGW>();
-            theCoin.AddCoin(thecoin.CoinAmount);
-            collision.gameObject.SetActive(false);
-            SoundManager.instance.PlaySE(sound_Coin);
-        }
-        else if (collision.transform.CompareTag("Item"))
+
+        if (collision.transform.CompareTag("Item"))
         {
             SoundManager.instance.PlaySE(sound_Jump);
             rigid.velocity = Vector2.up * WindForce;
         }
+
+        if (collision.transform.CompareTag("Magnet"))
+        {
+            StartCoroutine(MagnetActivate());
+            collision.gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator MagnetActivate()
+    {
+        MagnetZone.SetActive(true);
+        yield return new WaitForSeconds(10f);
+        MagnetZone.SetActive(false);
     }
 }

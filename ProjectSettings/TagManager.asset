@@ -11,6 +11,8 @@ TagManager:
   - CharacterPage
   - ItemPage
   - PaymentPage
+  - MagnetZone
+  - Magnet
   layers:
   - Default
   - TransparentFX
@@ -20,10 +22,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - MagnetZone
+  - Item
+  - Player
+  - Coin
   - 
   - 
   - 
