@@ -71702,21 +71702,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1878413696}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.31
@@ -73349,11 +73335,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73562,21 +73543,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -73655,11 +73622,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -74614,21 +74576,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37342423}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.55
@@ -74703,21 +74651,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0799999
@@ -75456,11 +75390,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -77920,21 +77849,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23448584}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54999995
@@ -78102,11 +78017,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -78354,21 +78264,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.55
@@ -79277,21 +79173,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 615356014}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.63
@@ -79445,11 +79327,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -80675,21 +80552,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37342423}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78000003
@@ -81384,21 +81247,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7099999
@@ -82070,21 +81919,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37342423}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54999995
@@ -82313,11 +82148,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -82554,21 +82384,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.39999998
@@ -83032,21 +82848,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.31
@@ -83962,11 +83764,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -84699,11 +84496,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -85447,21 +85239,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23448584}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.16
@@ -86079,11 +85857,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -86870,21 +86643,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.59400004
@@ -87358,11 +87117,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -87930,21 +87684,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.124
@@ -89131,21 +88871,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -90221,21 +89947,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23448584}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78000003
@@ -90604,21 +90316,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.55
@@ -90772,11 +90470,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -91782,21 +91475,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37342423}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.16
@@ -92120,11 +91799,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -93331,11 +93005,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -93426,21 +93095,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78000003
@@ -94967,11 +94622,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -95791,21 +95441,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16
@@ -95884,11 +95520,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -96055,21 +95686,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37342423}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.9299999
@@ -97419,11 +97036,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -97518,11 +97130,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -98089,11 +97696,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98263,11 +97865,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
@@ -99183,21 +98780,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1514516089}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.7099999
@@ -100018,11 +99601,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -100533,11 +100111,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -101028,11 +100601,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -101279,21 +100847,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.026000023
@@ -101380,21 +100934,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37342423}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78000003
@@ -101469,21 +101009,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 615356014}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.7099999
@@ -101994,21 +101520,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 205453513}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.0799999
@@ -102522,21 +102034,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23448584}
     m_Modifications:
-<<<<<<< Updated upstream
     - target: {fileID: 6932829622681567604, guid: 1b25d6924409a5f408e3b89a80a82877,
-=======
-    - target: {fileID: 4083033740034137959, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137976, guid: 388341748d9d8e64098496dcc1f026ad,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4083033740034137977, guid: 388341748d9d8e64098496dcc1f026ad,
->>>>>>> Stashed changes
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.78000003
