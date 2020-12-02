@@ -7,6 +7,14 @@ public class PauseGame : MonoBehaviour
     public GameObject PauseUI;
     public static bool isPause;
 
+
+
+    private void Awake()
+    {
+        isPause = false;
+        
+    }
+
     public void Pause()
     {
         PauseUI.SetActive(true);
@@ -24,7 +32,6 @@ public class PauseGame : MonoBehaviour
     public void BackToMain()
     {
         isPause = false;
-        Time.timeScale = 1;
-        GameController_PGW.instance.Back();
+        DataManager_PGW.instance.Back();
     }
 }

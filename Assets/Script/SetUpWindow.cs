@@ -15,14 +15,14 @@ public class SetUpWindow : MonoBehaviour
 
     private void Start()
     {
-        BGM_Toggle.isOn = GameController_PGW.instance.BgmOn;
-        Sfx_Toggle.isOn = GameController_PGW.instance.SfxOn;
+        BGM_Toggle.isOn = DataManager_PGW.instance.BgmOn;
+        Sfx_Toggle.isOn = DataManager_PGW.instance.SfxOn;
     }
     public void ToggleBGM()
     {
         BGM_On = BGM_Toggle.isOn;
-        GameController_PGW.instance.BgmOn = BGM_On;
-        GameController_PGW.instance.SaveData();
+        DataManager_PGW.instance.BgmOn = BGM_On;
+        DataManager_PGW.instance.SaveData();
         if (BGM_On)
         {
             SoundManager.instance.bgmPlayer.Play();
@@ -37,8 +37,8 @@ public class SetUpWindow : MonoBehaviour
     public void ToggleSfx()
     {
         Sfx_On = Sfx_Toggle.isOn;
-        GameController_PGW.instance.SfxOn = Sfx_On;
-        GameController_PGW.instance.SaveData();
+        DataManager_PGW.instance.SfxOn = Sfx_On;
+        DataManager_PGW.instance.SaveData();
         
     }
 

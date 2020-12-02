@@ -40,7 +40,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySE(string _soundName)
     {
-        if (GameController_PGW.instance.SfxOn)
+        if (DataManager_PGW.instance.SfxOn)
         {
             for (int i = 0; i < SfxSounds.Length; i++)
             {

@@ -22,11 +22,11 @@ public class SelectCharacter : MonoBehaviour
 
         btn = GetComponent<Button>();
 
-        for (int i = 0; i < GameController_PGW.instance.chars.Count; i++)
+        for (int i = 0; i < DataManager_PGW.instance.chars.Count; i++)
         {
-            if (charsName == GameController_PGW.instance.chars[i].PlayerName)
+            if (charsName == DataManager_PGW.instance.chars[i].PlayerName)
             {
-                thePlayer = GameController_PGW.instance.chars[i];
+                thePlayer = DataManager_PGW.instance.chars[i];
 
             }
         }
@@ -53,7 +53,7 @@ public class SelectCharacter : MonoBehaviour
     {
         if (isUnlock)
         {
-            GameController_PGW.instance.currentCharacter = character;
+            DataManager_PGW.instance.currentCharacter = character;
             for (int i = 0; i < chars.Length; i++)
             {
                 if (chars[i] != this) chars[i].NotSelect();
@@ -64,9 +64,9 @@ public class SelectCharacter : MonoBehaviour
     }
     public void StartBird()
     {
-        if (GameController_PGW.instance.FirstOn)
+        if (DataManager_PGW.instance.FirstOn)
         {
-            GameController_PGW.instance.FirstOn = false;
+            DataManager_PGW.instance.FirstOn = false;
             TryPurchase();
 
         }
@@ -84,9 +84,9 @@ public class SelectCharacter : MonoBehaviour
     {
         if (!isUnlock)
         {
-            if (GameController_PGW.instance.TotalCoin >= Cost)
+            if (DataManager_PGW.instance.TotalCoin >= Cost)
             {
-                GameController_PGW.instance.TotalCoin -= Cost;
+                DataManager_PGW.instance.TotalCoin -= Cost;
                 isUnlock = true;
                 thePlayer.isUnlock = isUnlock;
                 thePlayer.PlayerName = charsName;
@@ -98,7 +98,7 @@ public class SelectCharacter : MonoBehaviour
     private void Purchase(PlayerInfo player)
     {
         player = thePlayer;
-        GameController_PGW.instance.chars.Add(player);
-        GameController_PGW.instance.SaveData();
+        DataManager_PGW.instance.chars.Add(player);
+        DataManager_PGW.instance.SaveData();
     }
 }

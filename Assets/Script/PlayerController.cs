@@ -14,53 +14,54 @@ public class PlayerController : MonoBehaviour
     public string sound_Jump;
 
     public GameObject MagnetZone;
-
+    GamePlayManager GamePlayer;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
+        GamePlayer = FindObjectOfType<GamePlayManager>();
 
 
 
 
-        if (GameController_PGW.instance.MaxJumpCount < 2)
+        if (DataManager_PGW.instance.MaxJumpCount < 2)
 
         {
             JumpCount = 1;
         }
         else
         {
-            JumpCount = GameController_PGW.instance.MaxJumpCount;
+            JumpCount = DataManager_PGW.instance.MaxJumpCount;
         }
 
-        if (GameController_PGW.instance.WindForce < 20)
+        if (DataManager_PGW.instance.WindForce < 20)
         {
             WindForce = 15;
         }
         else
         {
-            WindForce = GameController_PGW.instance.WindForce;
+            WindForce = DataManager_PGW.instance.WindForce;
         }
 
-        if (GameController_PGW.instance.GravityGrade < 1)
+        if (DataManager_PGW.instance.GravityGrade < 1)
         {
             rigid.gravityScale = 3;
         }
         else
         {
-            rigid.gravityScale = GameController_PGW.instance.GravityScale;
+            rigid.gravityScale = DataManager_PGW.instance.GravityScale;
         }
 
-        if (GameController_PGW.instance.JumpPower < 20)
+        if (DataManager_PGW.instance.JumpPower < 20)
         {
             power = 15f;
 
         }
         else
         {
-            power = GameController_PGW.instance.JumpPower;
+            power = DataManager_PGW.instance.JumpPower;
         }
 
 
@@ -82,7 +83,8 @@ public class PlayerController : MonoBehaviour
 
         if (collision.transform.CompareTag("Ground"))
         {
-            GameController_PGW.instance.GameOver(true);
+            DataManager_PGW.instance.GameOver(true);
+            GamePlayer.GameOver();
         }
 
     }

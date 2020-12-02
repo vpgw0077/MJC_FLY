@@ -9,7 +9,7 @@ public class SpawnPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = Instantiate(PlayerPrefabs[(int)GameController_PGW.instance.currentCharacter]);
+        player = Instantiate(PlayerPrefabs[(int)DataManager_PGW.instance.currentCharacter]);
         player.transform.position = transform.position;
     }
 

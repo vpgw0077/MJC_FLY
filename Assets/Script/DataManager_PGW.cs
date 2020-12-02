@@ -9,9 +9,9 @@ public enum Character
     P1, P2, P3,P4
 }
 
-public class GameController_PGW : MonoBehaviour
+public class DataManager_PGW : MonoBehaviour
 {
-    public static GameController_PGW instance = null;
+    public static DataManager_PGW instance = null;
     public bool FirstOn = true;
 
     public int JumpGrade;
@@ -54,10 +54,10 @@ public class GameController_PGW : MonoBehaviour
     {
         if (isOver)
         {
-            TotalCoin += CoinManager.CurrentCoin;
+            TotalCoin += CoinManager.instance.CurrentCoin;
             SaveData();
             AdMobManager.instance.ShowFrontAd();
-            SceneManager.LoadScene("MainTitle");
+
         }
     }
 
@@ -70,6 +70,10 @@ public class GameController_PGW : MonoBehaviour
     public void Back()
     {
         instance.GameOver(true);
+        SceneManager.LoadScene("MainTitle");
+    }
+    public void BacktoMain()
+    {
         SceneManager.LoadScene("MainTitle");
     }
 
@@ -129,13 +133,6 @@ public class GameController_PGW : MonoBehaviour
             SfxOn = save.SfxOn;
 
         }
-    }
-
-    private void OnApplicationQuit()
-    {
-
-        GameOver(true);
-
     }
 
 }

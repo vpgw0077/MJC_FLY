@@ -28,7 +28,7 @@ public class Coin_PGW : MonoBehaviour
     {
         if (MagnetOn)
         {
-            transform.position = Vector3.MoveTowards(transform.position, PlayerTransform.transform.position, 20f * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, PlayerTransform.transform.position, 40f * Time.deltaTime);
 
         }
     }

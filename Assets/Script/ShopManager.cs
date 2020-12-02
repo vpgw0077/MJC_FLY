@@ -44,16 +44,16 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
 
-        JumpGrade = GameController_PGW.instance.JumpGrade;
-        ItemGrade = GameController_PGW.instance.ItemGrade;
-        JumpPowerGrade = GameController_PGW.instance.JumpPowerGrade;
-        GravityGrade = GameController_PGW.instance.GravityGrade;
+        JumpGrade = DataManager_PGW.instance.JumpGrade;
+        ItemGrade = DataManager_PGW.instance.ItemGrade;
+        JumpPowerGrade = DataManager_PGW.instance.JumpPowerGrade;
+        GravityGrade = DataManager_PGW.instance.GravityGrade;
         UpdateCost();
     }
 
     private void Update()
     {
-        CoinCount.text = " X " + GameController_PGW.instance.TotalCoin.ToString();
+        CoinCount.text = " X " + DataManager_PGW.instance.TotalCoin.ToString();
         UpdateCost();
     }
     public void OpenShop()
@@ -91,49 +91,49 @@ public class ShopManager : MonoBehaviour
 
     public void TryItemUpgrade()
     {
-        if (GameController_PGW.instance.TotalCoin >= ItemCost && ItemGrade < 5)
+        if (DataManager_PGW.instance.TotalCoin >= ItemCost && ItemGrade < 5)
         {
             ItemUpGrade();
-            GameController_PGW.instance.TotalCoin -= ItemCost;
-            GameController_PGW.instance.ItemGrade = ItemGrade;
-            GameController_PGW.instance.WindForce = WindPower;
-            GameController_PGW.instance.SaveData();
+            DataManager_PGW.instance.TotalCoin -= ItemCost;
+            DataManager_PGW.instance.ItemGrade = ItemGrade;
+            DataManager_PGW.instance.WindForce = WindPower;
+            DataManager_PGW.instance.SaveData();
         }
     }
 
     public void TryJumpUpgrade()
     {
-        if (GameController_PGW.instance.TotalCoin >= JumpCost && JumpGrade < 5)
+        if (DataManager_PGW.instance.TotalCoin >= JumpCost && JumpGrade < 5)
         {
             JumpUpGrade();
-            GameController_PGW.instance.TotalCoin -= JumpCost;
-            GameController_PGW.instance.JumpGrade = JumpGrade;
-            GameController_PGW.instance.MaxJumpCount = MaxJumpCount;
-            GameController_PGW.instance.SaveData();
+            DataManager_PGW.instance.TotalCoin -= JumpCost;
+            DataManager_PGW.instance.JumpGrade = JumpGrade;
+            DataManager_PGW.instance.MaxJumpCount = MaxJumpCount;
+            DataManager_PGW.instance.SaveData();
         }
     }
 
     public void TryJumpPowerUpgrade()
     {
-        if(GameController_PGW.instance.TotalCoin >= JumpPowerCost && JumpPowerGrade < 5)
+        if(DataManager_PGW.instance.TotalCoin >= JumpPowerCost && JumpPowerGrade < 5)
         {
             JumpPowerUpgrade();
-            GameController_PGW.instance.TotalCoin -= JumpPowerCost;
-            GameController_PGW.instance.JumpPowerGrade = JumpPowerGrade;
-            GameController_PGW.instance.JumpPower = JumpPower;
-            GameController_PGW.instance.SaveData();
+            DataManager_PGW.instance.TotalCoin -= JumpPowerCost;
+            DataManager_PGW.instance.JumpPowerGrade = JumpPowerGrade;
+            DataManager_PGW.instance.JumpPower = JumpPower;
+            DataManager_PGW.instance.SaveData();
         }
     }
 
     public void TryGravityUpgrade()
     {
-        if (GameController_PGW.instance.TotalCoin >= GravityCost && GravityGrade < 5)
+        if (DataManager_PGW.instance.TotalCoin >= GravityCost && GravityGrade < 5)
         {
             GravityUpgrade();
-            GameController_PGW.instance.TotalCoin -= GravityCost;
-            GameController_PGW.instance.GravityGrade = GravityGrade;
-            GameController_PGW.instance.GravityScale = GravityScale;
-            GameController_PGW.instance.SaveData();
+            DataManager_PGW.instance.TotalCoin -= GravityCost;
+            DataManager_PGW.instance.GravityGrade = GravityGrade;
+            DataManager_PGW.instance.GravityScale = GravityScale;
+            DataManager_PGW.instance.SaveData();
         }
     }
 
