@@ -8,13 +8,13 @@ public class Coin_PGW : MonoBehaviour
     public int CoinAmount;
     public string sound_Coin;
     public Transform PlayerTransform;
-    Vector3 Originpos;
+    public Vector3 Originpos;
     bool MagnetOn;
 
     private void Start()
     {
         PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Originpos = transform.position;
+        Originpos = transform.localPosition;
     }
 
     private void Update()
@@ -51,7 +51,7 @@ public class Coin_PGW : MonoBehaviour
     private void OnDisable()
     {
         MagnetOn = false;
-        transform.position = Originpos;
-    }
+        transform.localPosition = Originpos;
 
+    }
 }
