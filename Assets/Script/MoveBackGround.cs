@@ -5,25 +5,37 @@ using UnityEngine;
 
 public class MoveBackGround : MonoBehaviour
 {
+    public enum BG_num
+    {
+        first,
+        second
+    }
+    public BG_num BackGround_Number;
     public float speed;
     public GameObject[] CoinBlock;
     public GameObject CurrentBlock;
 
-
     int random;
     Transform tr;
-    CoinActivate ChildrenCoin;
+    public CoinActivate ChildrenCoin;
     // Start is called before the first frame update
     void Start()
     {
 
         tr = GetComponent<Transform>();
-        random = UnityEngine.Random.Range(0, CoinBlock.Length);
-        CoinBlock[random].SetActive(true);
-        CurrentBlock = CoinBlock[random];
-        ChildrenCoin = CurrentBlock.GetComponent<CoinActivate>();
+        if (BackGround_Number == BG_num.first)
+        {
 
+            random = UnityEngine.Random.Range(0, CoinBlock.Length);
+            CoinBlock[random].SetActive(true);
+            CurrentBlock = CoinBlock[random];
+            ChildrenCoin = CurrentBlock.GetComponent<CoinActivate>();
 
+        }
+        else if(BackGround_Number == BG_num.second)
+        {
+            StartCoroutine(ShowCoin());
+        }
     }
 
     // Update is called once per frame
@@ -41,17 +53,27 @@ public class MoveBackGround : MonoBehaviour
         }
 
 
+
+    }
+
+    private IEnumerator ShowCoin()
+    {
+        random = UnityEngine.Random.Range(0, CoinBlock.Length);
+        yield return new WaitForSeconds(11.5f);
+        CoinBlock[random].SetActive(true);
+        CurrentBlock = CoinBlock[random];
+        ChildrenCoin = CurrentBlock.GetComponent<CoinActivate>();
     }
 
     private void ReplaceBG()
     {
+
         tr.position = new Vector3(80f, tr.position.y, 0);
         ChildrenCoin.CoinOn();
         CurrentBlock.SetActive(false);
-        random = UnityEngine.Random.Range(0, CoinBlock.Length);
-        CoinBlock[random].SetActive(true);
-        CurrentBlock = CoinBlock[random];
-        ChildrenCoin = CurrentBlock.GetComponent<CoinActivate>();
+        StartCoroutine(ShowCoin());
+
+
     }
 
 }

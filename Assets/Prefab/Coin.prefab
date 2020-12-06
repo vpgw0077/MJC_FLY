@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 18
   m_IsActive: 1
 --- !u!4 &6932829622681567604
 Transform:
@@ -124,3 +124,4 @@ MonoBehaviour:
   CoinAmount: 1000
   sound_Coin: Coin
   PlayerTransform: {fileID: 0}
+  Originpos: {x: 0, y: 0, z: 0}

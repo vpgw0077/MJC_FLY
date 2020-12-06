@@ -76,6 +76,10 @@ public class DataManager_PGW : MonoBehaviour
     {
         SceneManager.LoadScene("MainTitle");
     }
+    public void GameQuit()
+    {
+        Application.Quit();
+    }
 
 
 
