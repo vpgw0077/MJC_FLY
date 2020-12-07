@@ -9,7 +9,6 @@ public class ShopManager : MonoBehaviour
     public GameObject ShopPage;
     public GameObject CharacterShop;
     public GameObject ItemShop;
-    public GameObject PaymentShop;
 
     public Button JumpUpgradeBtn;
     public Text JumpText;
@@ -72,21 +71,18 @@ public class ShopManager : MonoBehaviour
     {
         CharacterShop.SetActive(true);
         ItemShop.SetActive(false);
-        PaymentShop.SetActive(false);
     }
 
     public void OpenItemShop()
     {
         CharacterShop.SetActive(false);
         ItemShop.SetActive(true);
-        PaymentShop.SetActive(false);
     }
 
     public void OpenPaymentShop()
     {
         CharacterShop.SetActive(false);
         ItemShop.SetActive(false);
-        PaymentShop.SetActive(true);
     }
 
     public void TryItemUpgrade()
