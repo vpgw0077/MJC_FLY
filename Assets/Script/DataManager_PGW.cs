@@ -56,7 +56,6 @@ public class DataManager_PGW : MonoBehaviour
         {
             TotalCoin += CoinManager.instance.CurrentCoin;
             SaveData();
-            AdMobManager.instance.ShowFrontAd();
 
         }
     }
@@ -64,6 +63,7 @@ public class DataManager_PGW : MonoBehaviour
 
     public void GameStart()
     {
+        AdMobManager.instance.ShowFrontAd();
         SceneManager.LoadScene("Repeat");
     }
 

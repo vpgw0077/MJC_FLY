@@ -31,6 +31,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void Replay()
     {
+        AdMobManager.instance.ShowFrontAd();
         DataManager_PGW.instance.GameStart();
     }
     public void BackToMain()
