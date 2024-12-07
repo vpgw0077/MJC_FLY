@@ -209,30 +209,30 @@ public class ShopManager : MonoBehaviour
     {
         switch (JumpGrade)
         {
-            case 0:
+            case 1:
 
                 MaxJumpCount = 2;
                 JumpGrade++;
                 break;
 
-            case 1:
+            case 2:
 
                 MaxJumpCount = 3;
                 JumpGrade++;
                 break;
-            case 2:
+            case 3:
 
                 MaxJumpCount = 4;
                 JumpGrade++;
                 break;
 
-            case 3:
+            case 4:
 
                 MaxJumpCount = 5;
                 JumpGrade++;
                 break;
 
-            case 4:
+            case 5:
 
                 MaxJumpCount = 6;
                 JumpGrade++;
