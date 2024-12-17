@@ -99,6 +99,6 @@ public class SelectCharacter : MonoBehaviour
     {
         player = thePlayer;
         DataManager_PGW.instance.chars.Add(player);
-        DataManager_PGW.instance.SaveData();
+       // DataManager_PGW.instance.SaveData();
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float vel;
     public Rigidbody2D rigid;
 
     float power;
@@ -22,7 +23,6 @@ public class PlayerController : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         GamePlayer = FindObjectOfType<GamePlayManager>();
-
 
 
 
@@ -66,11 +66,15 @@ public class PlayerController : MonoBehaviour
 
 
     }
-
+    private void Update()
+    {
+        vel = rigid.velocity.magnitude;
+    }
     public void TryJump()
     {
         if (JumpCount > 0)
         {
+            rigid.velocity = Vector2.zero;
             rigid.velocity = Vector2.up * power;
             SoundManager.instance.PlaySE(sound_Jump);
             JumpCount -= 1;
@@ -95,6 +99,7 @@ public class PlayerController : MonoBehaviour
         if (collision.transform.CompareTag("Item"))
         {
             SoundManager.instance.PlaySE(sound_Jump);
+            rigid.velocity = Vector2.zero;
             rigid.velocity = Vector2.up * WindForce;
         }
 

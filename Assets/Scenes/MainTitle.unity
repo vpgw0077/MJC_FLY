@@ -1330,6 +1330,7 @@ GameObject:
   - component: {fileID: 301896885}
   - component: {fileID: 301896884}
   - component: {fileID: 301896886}
+  - component: {fileID: 301896887}
   m_Layer: 5
   m_Name: JumpPower_cost
   m_TagString: Untagged
@@ -1437,8 +1438,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633515099617350107}
-        m_MethodName: TryJumpPowerUpgrade
+      - m_Target: {fileID: 301896887}
+        m_MethodName: UpgradeAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1448,6 +1449,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &301896887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301896882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97e70a3df6ee9e44bd50aa6d085e61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 1204282564}
+  purchaseButton: {fileID: 301896886}
 --- !u!1 &313792723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,6 +5425,7 @@ GameObject:
   - component: {fileID: 1227344497}
   - component: {fileID: 1227344496}
   - component: {fileID: 1227344498}
+  - component: {fileID: 1227344499}
   m_Layer: 5
   m_Name: Gravity_cost
   m_TagString: Untagged
@@ -5517,8 +5533,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633515099617350107}
-        m_MethodName: TryGravityUpgrade
+      - m_Target: {fileID: 1227344499}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5528,6 +5544,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1227344499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227344494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937f4b0aee0b3d54b9390b966246e45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 299865030}
+  purchaseButton: {fileID: 1227344498}
 --- !u!1 &1256545457
 GameObject:
   m_ObjectHideFlags: 0
@@ -6505,6 +6535,7 @@ GameObject:
   - component: {fileID: 1591512640}
   - component: {fileID: 1591512639}
   - component: {fileID: 1591512638}
+  - component: {fileID: 1591512636}
   m_Layer: 5
   m_Name: JumpCount_cost
   m_TagString: Untagged
@@ -6512,6 +6543,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1591512636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591512635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cad2ed1250f0d44831006f8a5400e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 848058658}
+  purchaseButton: {fileID: 1591512638}
 --- !u!224 &1591512637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6575,8 +6620,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633515099617350107}
-        m_MethodName: TryJumpUpgrade
+      - m_Target: {fileID: 1591512636}
+        m_MethodName: UpgradeAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7489,6 +7534,7 @@ GameObject:
   - component: {fileID: 1749286088}
   - component: {fileID: 1749286087}
   - component: {fileID: 1749286089}
+  - component: {fileID: 1749286090}
   m_Layer: 5
   m_Name: WindForce_cost
   m_TagString: Untagged
@@ -7596,8 +7642,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633515099617350107}
-        m_MethodName: TryItemUpgrade
+      - m_Target: {fileID: 1749286090}
+        m_MethodName: UpgradeAbility
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7607,6 +7653,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1749286090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749286085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fec7c5f44f977a4fb78f6c3398f2eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  costText: {fileID: 136261919}
+  purchaseButton: {fileID: 1749286089}
 --- !u!1 &1784900031
 GameObject:
   m_ObjectHideFlags: 0
@@ -8550,18 +8610,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a27c2a06dd3bfb43b0f033c1714e53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopPage: {fileID: 6021352926980506324}
+  ShopPage: {fileID: 8940784004267352420}
   CharacterShop: {fileID: 8940784002815223628}
   ItemShop: {fileID: 513717545}
   JumpUpgradeBtn: {fileID: 1591512638}
   JumpText: {fileID: 848058658}
-  JumpPowerBtn: {fileID: 301896886}
-  JumpPowerText: {fileID: 1204282564}
+  jumpPowerCostBtn: {fileID: 0}
+  jumpPowerCostText: {fileID: 0}
   GravityBtn: {fileID: 1227344498}
   GravityText: {fileID: 299865030}
   ItemUpgradeBtn: {fileID: 1749286089}
   ItemText: {fileID: 136261919}
-  CoinCount: {fileID: 92825446150162040}
+  coinCount: {fileID: 92825446150162040}
   GravityCost: 0
   GravityGrade: 0
   GravityScale: 0
@@ -8711,7 +8771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &6940927860853518790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9469,7 +9529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8940784004267352422
 MonoBehaviour:
   m_ObjectHideFlags: 0

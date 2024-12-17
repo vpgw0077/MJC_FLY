@@ -22,7 +22,7 @@ public class SetUpWindow : MonoBehaviour
     {
         BGM_On = BGM_Toggle.isOn;
         DataManager_PGW.instance.BgmOn = BGM_On;
-        DataManager_PGW.instance.SaveData();
+        //DataManager_PGW.instance.SaveData();
         if (BGM_On)
         {
             SoundManager.instance.bgmPlayer.Play();
@@ -38,7 +38,7 @@ public class SetUpWindow : MonoBehaviour
     {
         Sfx_On = Sfx_Toggle.isOn;
         DataManager_PGW.instance.SfxOn = Sfx_On;
-        DataManager_PGW.instance.SaveData();
+        //DataManager_PGW.instance.SaveData();
         
     }
 

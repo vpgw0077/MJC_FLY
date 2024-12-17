@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShopManager : MonoBehaviour
+public class ShopManager : MonoBehaviour, ICoinUpdate
 {
     public GameObject ShopPage;
     public GameObject CharacterShop;
@@ -13,8 +13,8 @@ public class ShopManager : MonoBehaviour
     public Button JumpUpgradeBtn;
     public Text JumpText;
 
-    public Button JumpPowerBtn;
-    public Text JumpPowerText;
+    public Button jumpPowerCostBtn;
+    public Text jumpPowerCostText;
 
     public Button GravityBtn;
     public Text GravityText;
@@ -22,7 +22,7 @@ public class ShopManager : MonoBehaviour
     public Button ItemUpgradeBtn;
     public Text ItemText;
 
-    public Text CoinCount;
+    public Text coinCount;
 
     public int GravityCost;
     public int GravityGrade;
@@ -47,14 +47,10 @@ public class ShopManager : MonoBehaviour
         ItemGrade = DataManager_PGW.instance.ItemGrade;
         JumpPowerGrade = DataManager_PGW.instance.JumpPowerGrade;
         GravityGrade = DataManager_PGW.instance.GravityGrade;
-        UpdateCost();
+        UpdateCoinCount();
     }
 
-    private void Update()
-    {
-        CoinCount.text = " X " + DataManager_PGW.instance.TotalCoin.ToString();
-        UpdateCost();
-    }
+
     public void OpenShop()
     {
 
@@ -85,7 +81,13 @@ public class ShopManager : MonoBehaviour
         ItemShop.SetActive(false);
     }
 
-    public void TryItemUpgrade()
+    public void UpdateCoinCount()
+    {
+        coinCount.text = " X " + DataManager_PGW.instance.playerData.totalCoin.ToString() + "$";
+    }
+
+    #region oldVersion
+    /*public void TryItemUpgrade()
     {
         if (DataManager_PGW.instance.TotalCoin >= ItemCost && ItemGrade < 5)
         {
@@ -399,5 +401,6 @@ public class ShopManager : MonoBehaviour
             GravityBtn.interactable = false;
         }
 
-    }
+    }*/
+    #endregion
 }

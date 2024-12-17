@@ -6,26 +6,41 @@ public class CharacterBase : MonoBehaviour, IJump
 {
     public GameObject gg;
     public LayerMask layer;
-    Vector3 moveDirection = new Vector3(0, -9.81f, 0);
+    Vector3 moveDirection = new Vector3(0, -5f, 0);
     protected int jumpCount = 1;
     [SerializeField] protected float jumpPower = 15f;
     protected float windForce = 10f; // 아이템 파워
     protected float gravity = -9.81f;
     bool isGround = true;
+
+    public float jumpCoolDown = 1;
+    public float currentCoolDown = 0;
+    public bool isJumping = false;
     // Start is called before the first frame update
 
     // Update is called once per frame
+    private void Start()
+    {
+        jumpPower += DataManager_PGW.instance.jumpPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_JumpPower];
+    }
     void Update()
     {
         checkGround();
-        if (Input.GetKeyDown(KeyCode.Q)) Jump();
-
-        if (!isGround)
+        if (!isGround && !isJumping)
         {
             transform.position += moveDirection * Time.deltaTime;
 
         }
-
+        if (isJumping)
+        {
+            transform.position += new Vector3(0, jumpPower, 0) * Time.deltaTime * 0.5f;
+            currentCoolDown += Time.deltaTime;
+            if(currentCoolDown >= jumpCoolDown)
+            {
+                currentCoolDown = 0;
+                isJumping = false;
+            }
+        }
     }
     private void checkGround()
     {
@@ -47,8 +62,7 @@ public class CharacterBase : MonoBehaviour, IJump
     }
     public void Jump()
     {
-
-        transform.Translate(Vector2.up * jumpPower);
+        isJumping = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

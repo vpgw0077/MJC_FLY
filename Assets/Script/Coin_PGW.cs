@@ -13,7 +13,7 @@ public class Coin_PGW : MonoBehaviour
 
     private void Start()
     {
-        PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        //PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Originpos = transform.localPosition;
     }
 
