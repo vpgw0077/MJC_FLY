@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour, ITrade
 {
-    public GameObject ShopPage;
-    public GameObject CharacterShop;
-    public GameObject ItemShop;
+    [SerializeField] private GameObject ShopPage;
+    [SerializeField] private GameObject CharacterShop;
+    [SerializeField] private GameObject ItemShop;
     [SerializeField] private GameObject tradeFailUI;
 
     public Button JumpUpgradeBtn;
@@ -43,11 +43,6 @@ public class ShopManager : MonoBehaviour, ITrade
 
     private void Start()
     {
-
-        JumpGrade = DataManager_PGW.instance.JumpGrade;
-        ItemGrade = DataManager_PGW.instance.ItemGrade;
-        JumpPowerGrade = DataManager_PGW.instance.JumpPowerGrade;
-        GravityGrade = DataManager_PGW.instance.GravityGrade;
         UpdateCoinCount();
     }
 

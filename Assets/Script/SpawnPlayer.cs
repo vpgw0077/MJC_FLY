@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class SpawnPlayer : MonoBehaviour
 {
-    public GameObject[] PlayerPrefabs;
-    public GameObject player;
-    // Start is called before the first frame update
+    [SerializeField] private CharacterDictionary characterList;
     private void Awake()
     {
-        player = Instantiate(PlayerPrefabs[(int)DataManager_PGW.instance.currentCharacter]);
+        GameObject player = Instantiate(characterList.characters[DataManager_PGW.instance.playerData.currentCharacter]);
         player.transform.position = transform.position;
     }
 

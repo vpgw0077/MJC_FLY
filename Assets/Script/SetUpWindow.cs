@@ -23,6 +23,7 @@ public class SetUpWindow : MonoBehaviour
     public void ToggleBGM()
     {
         DataManager_PGW.instance.gameSettingData.BgmOn = bgmToggle.isOn;
+        SoundManager.instance.PlayBGM();
     }
 
     public void ToggleSfx()

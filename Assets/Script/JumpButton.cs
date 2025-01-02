@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class JumpButton : MonoBehaviour
 {
     Button btn;
-    PlayerController thePlayer;
+    CharacterBase thePlayer;
     // Start is called before the first frame update
     void Start()
     {
         btn = GetComponent<Button>();
-        thePlayer = FindObjectOfType<PlayerController>();
-        btn.onClick.AddListener(thePlayer.TryJump);
+        thePlayer = FindObjectOfType<CharacterBase>();
+        btn.onClick.AddListener(thePlayer.ReadyToJump);
 
     }
 

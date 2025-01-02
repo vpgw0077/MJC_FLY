@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 using System;
 using System.IO;
 
-public enum Character
-{
-    P1, P2, P3, P4
-}
 public enum CharacterList
 {
     StandardBird = 0,
@@ -21,7 +17,8 @@ public enum AbilityList
     JumpPower,
     JumpCount,
     Gravity,
-    ItemPower
+    ItemPower,
+    LevitationDuration
 }
 public class CharacterUnlockData
 {
@@ -34,6 +31,7 @@ public class PlayerData
     public int grade_JumpPower = 0;
     public int grade_Gravity = 0;
     public int grade_ItemPower = 0;
+    public int grade_LevitationDuration = 0;
     public CharacterList currentCharacter = CharacterList.StandardBird;
 
 }
@@ -53,36 +51,13 @@ public class DataManager_PGW : MonoBehaviour
     public AbilityPurchaseData jumpPowerData { get; private set; }
     public AbilityPurchaseData gravityData { get; private set; }
     public AbilityPurchaseData itemPowerData { get; private set; }
+    public AbilityPurchaseData LevitationDurationData { get; private set; }
 
 
     private string dataFilePath;
     private string playerDataFileName = "playerData";
     private string characterUnlockDataName = "unlockData";
     private string gameSettingDataName = "setting";
-
-    #region 정리
-    public bool FirstOn = true;
-
-    public int JumpGrade;
-    public int MaxJumpCount;
-
-    public int ItemGrade;
-    public float WindForce;
-
-    public int GravityGrade;
-    public float GravityScale;
-
-    public int JumpPowerGrade;
-    public float JumpPower;
-
-    public int TotalCoin;
-    public List<PlayerInfo> chars = new List<PlayerInfo>();
-
-    public Character currentCharacter;
-
-    public bool BgmOn;
-    public bool SfxOn;
-    #endregion
     void Awake()
     {
         if (instance == null)
@@ -100,6 +75,7 @@ public class DataManager_PGW : MonoBehaviour
         jumpPowerData = Resources.Load<AbilityPurchaseData>("ShopData/JumpPowerData");
         gravityData = Resources.Load<AbilityPurchaseData>("ShopData/GravityData");
         itemPowerData = Resources.Load<AbilityPurchaseData>("ShopData/ItemPowerData");
+        LevitationDurationData = Resources.Load<AbilityPurchaseData>("ShopData/LevitationDurationData");
 
         dataFilePath = Application.persistentDataPath + "/save/";
         LoadData();
@@ -112,8 +88,7 @@ public class DataManager_PGW : MonoBehaviour
     {
         if (isOver)
         {
-            TotalCoin += CoinManager.instance.CurrentCoin;
-            SaveData();
+            playerData.totalCoin += CoinManager.instance.CurrentCoin;
 
         }
     }
@@ -193,6 +168,9 @@ public class DataManager_PGW : MonoBehaviour
                 break;
             case AbilityList.ItemPower:
                 playerData.grade_ItemPower++;
+                break;
+            case AbilityList.LevitationDuration:
+                playerData.grade_LevitationDuration++;
                 break;
 
         }

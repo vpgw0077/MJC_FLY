@@ -896,7 +896,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301321375}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2221,6 +2221,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b25d6924409a5f408e3b89a80a82877, type: 3}
+--- !u!1 &1636385606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6932829622681567605, guid: 1b25d6924409a5f408e3b89a80a82877,
+    type: 3}
+  m_PrefabInstance: {fileID: 1636385605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1636385607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636385606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3d0f4bb17e428469564ec34c803998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1643135190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,18 +2335,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c5fe58ba8c1424d8e85b70ddc605d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gg: {fileID: 2010086364}
   layer:
     serializedVersion: 2
     m_Bits: 4096
   playerStat:
     jumpCount: 1
-    jumpPower: 10
+    jumpPower: 20
     windForce: 5
     gravity: -6
-  jumpCoolDown: 2
-  currentCoolDown: 0
-  isJumping: 0
+    LevitationDuration: 0
+  isGround: 1
 --- !u!61 &1643135194
 BoxCollider2D:
   m_ObjectHideFlags: 0

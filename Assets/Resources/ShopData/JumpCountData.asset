@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: JumpCountData
   m_EditorClassIdentifier: 
   cost: 64000000c8000000900100002003000040060000ffffff7f
-  additionalAbility: 000000000100000002000000030000000400000005000000
+  additionalAbility:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
   maximumGrade: 5

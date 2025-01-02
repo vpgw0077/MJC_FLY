@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterBase : MonoBehaviour, IJump
+public class CharacterBase : MonoBehaviour
 {
-    public GameObject gg;
-    public LayerMask layer;
-    protected Vector3 moveDirection = Vector3.zero;
+    [SerializeField] private LayerMask layer;
     [SerializeField] protected PlayerStat playerStat;
-    bool isGround = true;
 
-    public float jumpCoolDown = 1;
-    public float currentCoolDown = 0;
-    public bool isJumping = false;
-    // Start is called before the first frame update
+    protected Vector3 moveDirection = Vector3.zero;
+    [SerializeField]protected bool isGround = true;
 
-    // Update is called once per frame
+    protected float currentCoolDown = 0;
+    protected bool isJumping = false;
+
     private void Start()
     {
         Init();
@@ -23,8 +20,9 @@ public class CharacterBase : MonoBehaviour, IJump
     private void Init()
     {
 
-        //playerStat.jumpCount += (int)DataManager_PGW.instance.jumpPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_JumpPower];
-        //playerStat.gravity += DataManager_PGW.instance.gravityData.additionalAbility[DataManager_PGW.instance.playerData.grade_Gravity];
+        /*playerStat.jumpCount += (int)DataManager_PGW.instance.jumpPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_JumpPower];
+        playerStat.gravity += DataManager_PGW.instance.gravityData.additionalAbility[DataManager_PGW.instance.playerData.grade_Gravity];
+        playerStat.LevitationDuration += DataManager_PGW.instance.LevitationDurationData.additionalAbility[DataManager_PGW.instance.playerData.grade_LevitationDuration];*/
         moveDirection = new Vector3(0, playerStat.gravity, 0);
     }
     void Update()
@@ -37,13 +35,18 @@ public class CharacterBase : MonoBehaviour, IJump
         }
         if (isJumping)
         {
-            transform.position += new Vector3(0, playerStat.jumpPower, 0) * Time.deltaTime * 0.5f;
-            currentCoolDown += Time.deltaTime;
-            if (currentCoolDown >= jumpCoolDown)
-            {
-                currentCoolDown = 0;
-                isJumping = false;
-            }
+            Jump();
+        }
+    }
+
+    protected virtual void Jump()
+    {
+        transform.position += new Vector3(0, playerStat.jumpPower, 0) * Time.deltaTime * 0.3f;
+        currentCoolDown += Time.deltaTime;
+        if (currentCoolDown >= playerStat.LevitationDuration)
+        {
+            currentCoolDown = 0;
+            isJumping = false;
         }
     }
     private void checkGround()
@@ -58,13 +61,9 @@ public class CharacterBase : MonoBehaviour, IJump
         {
             isGround = false;
         }
-        // 땅에 있는지 검사
+
     }
-    private void OnDrawGizmos()
-    {
-        Debug.DrawRay(transform.position, Vector2.down * 0.3f, Color.red);
-    }
-    public void Jump()
+    public void ReadyToJump()
     {
         if (playerStat.jumpCount > 0)
         {
@@ -74,11 +73,4 @@ public class CharacterBase : MonoBehaviour, IJump
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "Ground")
-        {
-            transform.position = gg.transform.position;
-        }
-    }
 }

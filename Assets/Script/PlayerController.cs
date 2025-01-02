@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         GamePlayer = FindObjectOfType<GamePlayManager>();
@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-    }
+    }*/
     private void Update()
     {
         vel = rigid.velocity.magnitude;

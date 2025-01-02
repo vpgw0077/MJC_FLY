@@ -12,7 +12,7 @@ public class fsdfsdg : MonoBehaviour
     {
         btn = GetComponent<Button>();
         character = FindObjectOfType<CharacterBase>();
-        btn.onClick.AddListener(character.Jump);
+        btn.onClick.AddListener(character.ReadyToJump);
     }
 
 }

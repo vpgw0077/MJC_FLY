@@ -9,4 +9,5 @@ public struct PlayerStat
     public float jumpPower;
     public float windForce;
     public float gravity;
+    public float LevitationDuration;
 }
