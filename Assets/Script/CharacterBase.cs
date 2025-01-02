@@ -6,11 +6,8 @@ public class CharacterBase : MonoBehaviour, IJump
 {
     public GameObject gg;
     public LayerMask layer;
-    Vector3 moveDirection = new Vector3(0, -5f, 0);
-    protected int jumpCount = 1;
-    [SerializeField] protected float jumpPower = 15f;
-    protected float windForce = 10f; // 아이템 파워
-    protected float gravity = -9.81f;
+    protected Vector3 moveDirection = Vector3.zero;
+    [SerializeField] protected PlayerStat playerStat;
     bool isGround = true;
 
     public float jumpCoolDown = 1;
@@ -21,7 +18,14 @@ public class CharacterBase : MonoBehaviour, IJump
     // Update is called once per frame
     private void Start()
     {
-        jumpPower += DataManager_PGW.instance.jumpPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_JumpPower];
+        Init();
+    }
+    private void Init()
+    {
+
+        //playerStat.jumpCount += (int)DataManager_PGW.instance.jumpPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_JumpPower];
+        //playerStat.gravity += DataManager_PGW.instance.gravityData.additionalAbility[DataManager_PGW.instance.playerData.grade_Gravity];
+        moveDirection = new Vector3(0, playerStat.gravity, 0);
     }
     void Update()
     {
@@ -33,9 +37,9 @@ public class CharacterBase : MonoBehaviour, IJump
         }
         if (isJumping)
         {
-            transform.position += new Vector3(0, jumpPower, 0) * Time.deltaTime * 0.5f;
+            transform.position += new Vector3(0, playerStat.jumpPower, 0) * Time.deltaTime * 0.5f;
             currentCoolDown += Time.deltaTime;
-            if(currentCoolDown >= jumpCoolDown)
+            if (currentCoolDown >= jumpCoolDown)
             {
                 currentCoolDown = 0;
                 isJumping = false;
@@ -62,7 +66,12 @@ public class CharacterBase : MonoBehaviour, IJump
     }
     public void Jump()
     {
-        isJumping = true;
+        if (playerStat.jumpCount > 0)
+        {
+            isJumping = true;
+            playerStat.jumpCount--;
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShopManager : MonoBehaviour, ICoinUpdate
+public class ShopManager : MonoBehaviour, ITrade
 {
     public GameObject ShopPage;
     public GameObject CharacterShop;
     public GameObject ItemShop;
+    [SerializeField] private GameObject tradeFailUI;
 
     public Button JumpUpgradeBtn;
     public Text JumpText;
@@ -86,6 +87,30 @@ public class ShopManager : MonoBehaviour, ICoinUpdate
         coinCount.text = " X " + DataManager_PGW.instance.playerData.totalCoin.ToString() + "$";
     }
 
+    public bool TradeSucceed(int cost)
+    {
+        if(DataManager_PGW.instance.playerData.totalCoin >= cost)
+        {
+            return true;
+        }
+        return false;
+    }
+    public bool TradeSucceed(int cost, CharacterList character)
+    {
+        if (DataManager_PGW.instance.playerData.totalCoin >= cost && DataManager_PGW.instance.characterUnlockData.CharacterUnlockState[(int)character] == false )
+        {
+            return true;
+        }
+        return false;
+    }
+    public void TradeFail()
+    {
+        tradeFailUI.SetActive(true);
+    }
+    public void CloseTradeFailUI()
+    {
+        tradeFailUI.SetActive(false);
+    }
     #region oldVersion
     /*public void TryItemUpgrade()
     {

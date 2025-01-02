@@ -14,30 +14,39 @@ public class AbilityUpgrade : MonoBehaviour
     protected int abilityGrade;
     protected int maximumAbilityGrade;
     protected string maxText = "MAX";
-    protected ICoinUpdate[] coinUpdate;
+    protected ITrade[] trade;
 
     protected void Awake()
     {
-        coinUpdate = FindObjectsOfType<MonoBehaviour>().OfType<ICoinUpdate>().ToArray();
+
+        trade = FindObjectsOfType<MonoBehaviour>().OfType<ITrade>().ToArray();
     }
     protected virtual void Start()
     {
-        UpdateUI();   
+        UpdateUI();
     }
     public virtual void UpgradeAbility()
     {
-        if (DataManager_PGW.instance.playerData.totalCoin >= abilityPurchaseData.cost[abilityGrade])
+        if (trade.Length > 0)
         {
-            DataManager_PGW.instance.playerData.totalCoin -= abilityPurchaseData.cost[abilityGrade];
-            DataManager_PGW.instance.UpdateAbilityGradeData(ability);
-            UpdateUI();
-            if (coinUpdate.Length > 0)
+            if (trade[0].TradeSucceed(abilityPurchaseData.cost[abilityGrade]))
             {
-                coinUpdate[0].UpdateCoinCount();
+                DataManager_PGW.instance.playerData.totalCoin -= abilityPurchaseData.cost[abilityGrade];
+                DataManager_PGW.instance.UpdateAbilityGradeData(ability);
+                UpdateUI();
+                trade[0].UpdateCoinCount();
+
+                //ui 업데이트 - 돈, 업그레이드 현황, max시 변경
+
             }
-            //ui 업데이트 - 돈, 업그레이드 현황, max시 변경
+
+            else
+            {
+                trade[0].TradeFail();
+            }
 
         }
+
     }
 
     protected virtual void UpdateUI()
@@ -49,7 +58,7 @@ public class AbilityUpgrade : MonoBehaviour
         }
         else
         {
-            costText.text = abilityPurchaseData.cost[abilityGrade].ToString();
+            costText.text = abilityPurchaseData.cost[abilityGrade].ToString() + "$";
         }
     }
 }

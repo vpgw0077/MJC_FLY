@@ -2321,8 +2321,12 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 4096
-  jumpPower: 15
-  jumpCoolDown: 1
+  playerStat:
+    jumpCount: 1
+    jumpPower: 10
+    windForce: 5
+    gravity: -6
+  jumpCoolDown: 2
   currentCoolDown: 0
   isJumping: 0
 --- !u!61 &1643135194

@@ -13,7 +13,8 @@ public enum Character
 public enum CharacterList
 {
     StandardBird = 0,
-    BrownBird
+    BrownBird,
+    RedBird
 }
 public enum AbilityList
 {
@@ -33,7 +34,7 @@ public class PlayerData
     public int grade_JumpPower = 0;
     public int grade_Gravity = 0;
     public int grade_ItemPower = 0;
-    public CharacterList currentCharacter;
+    public CharacterList currentCharacter = CharacterList.StandardBird;
 
 }
 public class GameSettingData
@@ -46,16 +47,18 @@ public class DataManager_PGW : MonoBehaviour
     public static DataManager_PGW instance = null;
     public CharacterUnlockData characterUnlockData = new CharacterUnlockData();
     public PlayerData playerData = new PlayerData();
+    public GameSettingData gameSettingData = new GameSettingData();
+
+    public AbilityPurchaseData jumpCountData { get; private set; }
+    public AbilityPurchaseData jumpPowerData { get; private set; }
+    public AbilityPurchaseData gravityData { get; private set; }
+    public AbilityPurchaseData itemPowerData { get; private set; }
 
 
-    public AbilityPurchaseData jumpCountData;
-    public AbilityPurchaseData jumpPowerData;
-    public AbilityPurchaseData gravityData;
-    public AbilityPurchaseData itemPowerData;
-
-    [SerializeField]private string dataFilePath;
+    private string dataFilePath;
     private string playerDataFileName = "playerData";
-    private string CharacterUnlockDataName = "unlockData";
+    private string characterUnlockDataName = "unlockData";
+    private string gameSettingDataName = "setting";
 
     #region 정리
     public bool FirstOn = true;
@@ -86,7 +89,6 @@ public class DataManager_PGW : MonoBehaviour
         {
             instance = this;
 
-
         }
         else if (instance != this)
         {
@@ -100,20 +102,7 @@ public class DataManager_PGW : MonoBehaviour
         itemPowerData = Resources.Load<AbilityPurchaseData>("ShopData/ItemPowerData");
 
         dataFilePath = Application.persistentDataPath + "/save/";
-        playerData.totalCoin += 10000;
         LoadData();
-        /* if (File.Exists())
-         {
-             LoadData();
-         }
-         else
-         {
-             characterUnlockData.CharacterUnlockState[0] = true;
-             for (int i = 1; i < characterUnlockData.CharacterUnlockState.Length; i++)
-             {
-                 characterUnlockData.CharacterUnlockState[i] = false;
-             }
-         }*/
 
     }
 
@@ -158,21 +147,34 @@ public class DataManager_PGW : MonoBehaviour
     {
         string player_Data = JsonUtility.ToJson(playerData);
         File.WriteAllText(dataFilePath + playerDataFileName, player_Data);
+
         string unlock_Data = JsonUtility.ToJson(characterUnlockData);
-        File.WriteAllText(dataFilePath + CharacterUnlockDataName, unlock_Data);
+        File.WriteAllText(dataFilePath + characterUnlockDataName, unlock_Data);
+
+        string setting_Data = JsonUtility.ToJson(gameSettingData);
+        File.WriteAllText(dataFilePath + gameSettingDataName, setting_Data);
     }
 
     public void LoadData()
     {
         if (!File.Exists(dataFilePath + playerDataFileName))
         {
+            characterUnlockData.CharacterUnlockState[0] = true;
+            for (int i = 1; i < characterUnlockData.CharacterUnlockState.Length; i++)
+            {
+                characterUnlockData.CharacterUnlockState[i] = false;
+            }
             Debug.LogError("데이터가 없습니다");
             return;
         }
         string player_Data = File.ReadAllText(dataFilePath + playerDataFileName);
         playerData = JsonUtility.FromJson<PlayerData>(player_Data);
-        string unlock_Data = File.ReadAllText(dataFilePath + CharacterUnlockDataName);
+
+        string unlock_Data = File.ReadAllText(dataFilePath + characterUnlockDataName);
         characterUnlockData = JsonUtility.FromJson<CharacterUnlockData>(unlock_Data);
+
+        string setting_Data = File.ReadAllText(dataFilePath + gameSettingDataName);
+        gameSettingData = JsonUtility.FromJson<GameSettingData>(setting_Data);
     }
 
 
@@ -195,32 +197,32 @@ public class DataManager_PGW : MonoBehaviour
 
         }
     }
-   /* public void SaveData()
-    {
-        SaveData save = new SaveData();
-        save.TotalCoin = TotalCoin;
+    /* public void SaveData()
+     {
+         SaveData save = new SaveData();
+         save.TotalCoin = TotalCoin;
 
-        save.JumpGrade = JumpGrade;
-        save.MaxJumpCount = MaxJumpCount;
+         save.JumpGrade = JumpGrade;
+         save.MaxJumpCount = MaxJumpCount;
 
-        save.ItemGrade = ItemGrade;
-        save.WindForce = WindForce;
+         save.ItemGrade = ItemGrade;
+         save.WindForce = WindForce;
 
-        save.JumpPowerGrade = JumpPowerGrade;
-        save.JumpPower = JumpPower;
+         save.JumpPowerGrade = JumpPowerGrade;
+         save.JumpPower = JumpPower;
 
-        save.GravityGrade = GravityGrade;
-        save.GravityScale = GravityScale;
+         save.GravityGrade = GravityGrade;
+         save.GravityScale = GravityScale;
 
-        save.playerSkin = currentCharacter;
-        save.chars = chars;
-        save.Firston = FirstOn;
+         save.playerSkin = currentCharacter;
+         save.chars = chars;
+         save.Firston = FirstOn;
 
-        save.BgmOn = BgmOn;
-        save.SfxOn = SfxOn;
+         save.BgmOn = BgmOn;
+         save.SfxOn = SfxOn;
 
-        GameData_PGW.Save(save);
-    }*/
+         GameData_PGW.Save(save);
+     }*/
 
     /*public void LoadData()
     {

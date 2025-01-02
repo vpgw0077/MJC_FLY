@@ -5,7 +5,8 @@ public class AbilityPurchaseData : ScriptableObject
 {
     public int[] cost;
     [Space]
-    public int[] additionalAbility;
+    public float[] additionalAbility;
     [Space]
     public int maximumGrade;
+    
 }

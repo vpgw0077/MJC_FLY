@@ -40,7 +40,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySE(string _soundName)
     {
-        if (DataManager_PGW.instance.SfxOn)
+        if (DataManager_PGW.instance.gameSettingData.SfxOn)
         {
             for (int i = 0; i < SfxSounds.Length; i++)
             {
@@ -63,8 +63,12 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBGM()
     {
-        bgmPlayer.clip = Bgm.clip;
-        bgmPlayer.Play();
+        if (DataManager_PGW.instance.gameSettingData.BgmOn)
+        {
+            bgmPlayer.clip = Bgm.clip;
+            bgmPlayer.Play();
+
+        }
     }
 
 }
