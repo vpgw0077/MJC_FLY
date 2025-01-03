@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin_PGW : MonoBehaviour
+public class Coin_PGW : MonoBehaviour,IMagnetic
 {
-    public int CoinAmount;
+    public int coinAmount;
     public string sound_Coin;
     public Transform PlayerTransform;
     public Vector3 Originpos;
     bool MagnetOn;
 
+    private InGameManager inGameManager = null;
+
     private void Start()
     {
         //PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        inGameManager = FindObjectOfType<InGameManager>();
         Originpos = transform.localPosition;
     }
 
@@ -37,9 +40,9 @@ public class Coin_PGW : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            CoinManager.instance.AddCoin(CoinAmount);
-            gameObject.SetActive(false);
+            inGameManager.UpdateCoin(coinAmount);
             SoundManager.instance.PlaySE(sound_Coin);
+            gameObject.SetActive(false);
         }
 
         else if (collision.CompareTag("MagnetZone"))

@@ -51,11 +51,9 @@ public class CharacterBase : MonoBehaviour
     }
     private void checkGround()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.2f, layer);
         if (Physics2D.Raycast(transform.position, Vector2.down, 0.2f, layer))
         {
             isGround = true;
-            Debug.Log(hit.transform.name);
         }
         else
         {

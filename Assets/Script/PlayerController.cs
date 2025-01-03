@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public string sound_Jump;
 
     public GameObject MagnetZone;
-    GamePlayManager GamePlayer;
+    //GamePlayManager GamePlayer;
 
 
     // Start is called before the first frame update
@@ -87,8 +87,8 @@ public class PlayerController : MonoBehaviour
 
         if (collision.transform.CompareTag("Ground"))
         {
-            DataManager_PGW.instance.GameOver(true);
-            GamePlayer.GameOver();
+            //DataManager_PGW.instance.GameOver(true);
+            //GamePlayer.GameOver();
         }
 
     }

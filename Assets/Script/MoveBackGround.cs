@@ -41,7 +41,7 @@ public class MoveBackGround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PauseGame.isPause && GamePlayManager.isStart)
+        if (Time.timeScale > 0)
         {
             tr.Translate(speed, 0, 0);
             if (tr.position.x < -80)
@@ -69,9 +69,9 @@ public class MoveBackGround : MonoBehaviour
     {
 
         tr.position = new Vector3(80f, tr.position.y, 0);
-        ChildrenCoin.CoinOn();
-        CurrentBlock.SetActive(false);
-        StartCoroutine(ShowCoin());
+        //ChildrenCoin.CoinOn();
+        //CurrentBlock.SetActive(false);
+        //StartCoroutine(ShowCoin());
 
 
     }

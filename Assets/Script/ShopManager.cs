@@ -6,76 +6,14 @@ using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour, ITrade
 {
-    [SerializeField] private GameObject ShopPage;
-    [SerializeField] private GameObject CharacterShop;
-    [SerializeField] private GameObject ItemShop;
     [SerializeField] private GameObject tradeFailUI;
-
-    public Button JumpUpgradeBtn;
-    public Text JumpText;
-
-    public Button jumpPowerCostBtn;
-    public Text jumpPowerCostText;
-
-    public Button GravityBtn;
-    public Text GravityText;
-
-    public Button ItemUpgradeBtn;
-    public Text ItemText;
-
-    public Text coinCount;
-
-    public int GravityCost;
-    public int GravityGrade;
-    public float GravityScale;
-
-    public int JumpPowerCost;
-    public int JumpPowerGrade;
-    public float JumpPower;
-
-    public int JumpCost;
-    public int JumpGrade;
-    public int MaxJumpCount = 0;
-
-    public int ItemCost;
-    public int ItemGrade;
-    public float WindPower;
+    [SerializeField] private Text coinCount;
 
     private void Start()
     {
         UpdateCoinCount();
     }
 
-
-    public void OpenShop()
-    {
-
-        ShopPage.SetActive(true);
-    }
-
-    public void CloseShop()
-    {
-
-        ShopPage.SetActive(false);
-    }
-
-    public void OpenCharacterShop()
-    {
-        CharacterShop.SetActive(true);
-        ItemShop.SetActive(false);
-    }
-
-    public void OpenItemShop()
-    {
-        CharacterShop.SetActive(false);
-        ItemShop.SetActive(true);
-    }
-
-    public void OpenPaymentShop()
-    {
-        CharacterShop.SetActive(false);
-        ItemShop.SetActive(false);
-    }
 
     public void UpdateCoinCount()
     {
@@ -101,10 +39,6 @@ public class ShopManager : MonoBehaviour, ITrade
     public void TradeFail()
     {
         tradeFailUI.SetActive(true);
-    }
-    public void CloseTradeFailUI()
-    {
-        tradeFailUI.SetActive(false);
     }
     #region oldVersion
     /*public void TryItemUpgrade()

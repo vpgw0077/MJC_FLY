@@ -82,37 +82,6 @@ public class DataManager_PGW : MonoBehaviour
 
     }
 
-
-
-    public void GameOver(bool isOver)
-    {
-        if (isOver)
-        {
-            playerData.totalCoin += CoinManager.instance.CurrentCoin;
-
-        }
-    }
-
-
-    public void GameStart()
-    {
-        AdMobManager.instance.ShowFrontAd();
-        SceneManager.LoadScene("Repeat");
-    }
-
-    public void Back()
-    {
-        instance.GameOver(true);
-        SceneManager.LoadScene("MainTitle");
-    }
-    public void BacktoMain()
-    {
-        SceneManager.LoadScene("MainTitle");
-    }
-    public void GameQuit()
-    {
-        Application.Quit();
-    }
     private void OnApplicationQuit()
     {
         SaveData();

@@ -15,7 +15,7 @@ public class StarPointMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PauseGame.isPause && GamePlayManager.isStart)
+        if (Time.timeScale > 0)
         {
             tr.Translate(speed, 0, 0);
             if (tr.position.x < -80)
