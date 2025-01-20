@@ -4,26 +4,13 @@ using UnityEngine;
 
 public class MagnetZone : MonoBehaviour
 {
-    public GameObject Player;
 
-    bool isOn;
-
-    private void OnEnable()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        isOn = true;
-    }
-    private void OnDisable()
-    {
-        isOn = false;
-    }
-    private void Update()
-    {
-        if (isOn)
+        if (collision.TryGetComponent(out MagneticObject magnet))
         {
-            transform.position = Player.transform.position;
-
+            magnet.ActivateMagnet(transform.parent.position);
         }
     }
-
 
 }

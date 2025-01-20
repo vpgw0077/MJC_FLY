@@ -6,6 +6,16 @@ using UnityEngine.SceneManagement;
 using System;
 using System.IO;
 
+[System.Serializable]
+public struct PlayerStat
+{
+    public int jumpCount;
+    public float jumpPower;
+    public float windForce;
+    public float gravity;
+    public float LevitationDuration;
+}
+
 public enum CharacterList
 {
     StandardBird = 0,

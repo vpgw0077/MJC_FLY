@@ -32,10 +32,10 @@ public class MoveBackGround : MonoBehaviour
             ChildrenCoin = CurrentBlock.GetComponent<CoinActivate>();
 
         }
-        else if(BackGround_Number == BG_num.second)
+        /*else if(BackGround_Number == BG_num.second)
         {
             StartCoroutine(ShowCoin());
-        }
+        }*/
     }
 
     // Update is called once per frame

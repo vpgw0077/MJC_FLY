@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-
+using TMPro;
 public class PurchaseCharacter : MonoBehaviour
 {
     [SerializeField] private int cost = 0;
     [SerializeField] private CharacterList character;
     [SerializeField] private Button purchaseButton;
-    [SerializeField] private Text costText;
+    [SerializeField] private TextMeshProUGUI costText;
     private bool IsUnlock => DataManager_PGW.instance.characterUnlockData.CharacterUnlockState[(int)character];
 
     private ITrade[] trade;
@@ -32,7 +32,6 @@ public class PurchaseCharacter : MonoBehaviour
         if (IsUnlock)
         {
             DataManager_PGW.instance.playerData.currentCharacter = character;
-            UpdateButtonAction();
         }
 
         // 구매할 때
@@ -46,6 +45,7 @@ public class PurchaseCharacter : MonoBehaviour
                     DataManager_PGW.instance.playerData.totalCoin -= cost;
                     DataManager_PGW.instance.characterUnlockData.CharacterUnlockState[(int)character] = true;
                     UpdateUI();
+                    trade[0].UpdateCoinCount();
                 }
 
                 else
@@ -75,7 +75,7 @@ public class PurchaseCharacter : MonoBehaviour
         }
         else
         {
-            costText.text = cost.ToString() + "$";
+            costText.text = string.Format("{0:#,###}", cost) + "$";
         }
     }
 

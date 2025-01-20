@@ -17,7 +17,10 @@ public class InGameManager : MonoBehaviour
     {
         InitGame();
         collisionEvent = FindObjectOfType<CollisionEvent>();
-        collisionEvent.GameOverEvent += GameOver;
+        if (collisionEvent != null)
+        {
+            collisionEvent.gameOverEvent += GameOver;
+        }
     }
     private void InitGame()
     {

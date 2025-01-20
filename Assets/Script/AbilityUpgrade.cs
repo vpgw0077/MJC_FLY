@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using TMPro;
 
 public class AbilityUpgrade : MonoBehaviour
 {
-    [SerializeField] protected Text costText;
+    [SerializeField] protected TextMeshProUGUI costText;
     [SerializeField] protected Button purchaseButton;
 
     protected AbilityList ability;
@@ -58,7 +59,8 @@ public class AbilityUpgrade : MonoBehaviour
         }
         else
         {
-            costText.text = abilityPurchaseData.cost[abilityGrade].ToString() + "$";
+            costText.text = string.Format("{0:#,###}", abilityPurchaseData.cost[abilityGrade]) + "$";
+
         }
     }
 }

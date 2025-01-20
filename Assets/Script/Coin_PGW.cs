@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin_PGW : MonoBehaviour,IMagnetic
+public class Coin_PGW : MonoBehaviour
 {
     public int coinAmount;
     public string sound_Coin;
@@ -13,28 +13,21 @@ public class Coin_PGW : MonoBehaviour,IMagnetic
 
     private InGameManager inGameManager = null;
 
-    private void Start()
+    private void Awake()
     {
         //PlayerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         inGameManager = FindObjectOfType<InGameManager>();
         Originpos = transform.localPosition;
     }
+    /* private void DragCoin()
+     {
+         if (MagnetOn)
+         {
+             transform.position = Vector3.MoveTowards(transform.position, PlayerTransform.transform.position, 40f * Time.deltaTime);
 
-    private void Update()
-    {
+         }
+     }*/
 
-        DragCoin();
-
-    }
-
-    private void DragCoin()
-    {
-        if (MagnetOn)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, PlayerTransform.transform.position, 40f * Time.deltaTime);
-
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,10 +38,10 @@ public class Coin_PGW : MonoBehaviour,IMagnetic
             gameObject.SetActive(false);
         }
 
-        else if (collision.CompareTag("MagnetZone"))
+        /*else if (collision.CompareTag("MagnetZone"))
         {
             MagnetOn = true;
-        }
+        }*/
     }
 
     private void OnDisable()
@@ -56,5 +49,15 @@ public class Coin_PGW : MonoBehaviour,IMagnetic
         MagnetOn = false;
         transform.localPosition = Originpos;
 
+    }
+
+    private void OnBecameVisible()
+    {
+        gameObject.SetActive(true);
+    }
+
+    private void OnBecameInvisible()
+    {
+        gameObject.SetActive(false);
     }
 }

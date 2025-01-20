@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShopManager : MonoBehaviour, ITrade
 {
     [SerializeField] private GameObject tradeFailUI;
-    [SerializeField] private Text coinCount;
+    [SerializeField] private TextMeshProUGUI coinCount;
 
     private void Start()
     {
@@ -17,7 +18,8 @@ public class ShopManager : MonoBehaviour, ITrade
 
     public void UpdateCoinCount()
     {
-        coinCount.text = " X " + DataManager_PGW.instance.playerData.totalCoin.ToString() + "$";
+        coinCount.text = string.Format("{0:#,###0}", DataManager_PGW.instance.playerData.totalCoin);
+
     }
 
     public bool TradeSucceed(int cost)

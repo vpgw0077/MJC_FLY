@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class CollisionEvent : MonoBehaviour
 {
-    public delegate void GameOver();
-    public event GameOver GameOverEvent;
+    public delegate void ExecuteEvent();
+    public event ExecuteEvent gameOverEvent;
 
+    private CharacterBase player = null;
 
-
+    private void Start()
+    {
+        player = GetComponentInParent<CharacterBase>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Ground"))
         {
-            GameOverEvent?.Invoke();
-            Debug.Log(collision.transform.tag);
+            gameOverEvent?.Invoke();
         }
     }
 
@@ -22,11 +25,12 @@ public class CollisionEvent : MonoBehaviour
     {
         if (collision.CompareTag("Magnet"))
         {
-
+            player.ActivateMagnet();
+            collision.gameObject.SetActive(false);
         }
         else if (collision.CompareTag("Item"))
         {
-
+            player.CollideItem();
         }
     }
 }
