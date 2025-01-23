@@ -23,14 +23,14 @@ public class CollisionEvent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Item"))
+        {
+            player.CollideItem();
+        }
+
         if (collision.CompareTag("Magnet"))
         {
             player.ActivateMagnet();
-            collision.gameObject.SetActive(false);
-        }
-        else if (collision.CompareTag("Item"))
-        {
-            player.CollideItem();
         }
     }
 }

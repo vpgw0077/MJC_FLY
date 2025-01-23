@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class SetUpWindow : MonoBehaviour
 {
-    [SerializeField] private GameObject SetUp;
+    [SerializeField] private Toggle bgmToggle = null;
+    [SerializeField] private Toggle sfxToggle = null;
 
-    [SerializeField] private Toggle bgmToggle;
-    [SerializeField] private Toggle sfxToggle;
-
+    [SerializeField] private AudioClip lobbyBgm = null;
     private void Start()
     {
         InitSetting();
@@ -19,11 +18,12 @@ public class SetUpWindow : MonoBehaviour
     {
         bgmToggle.isOn = DataManager_PGW.instance.gameSettingData.BgmOn;
         sfxToggle.isOn = DataManager_PGW.instance.gameSettingData.SfxOn;
+        SoundManager.instance.PlayBGM(lobbyBgm);
     }
     public void ToggleBGM()
     {
         DataManager_PGW.instance.gameSettingData.BgmOn = bgmToggle.isOn;
-        SoundManager.instance.PlayBGM();
+        SoundManager.instance.PlayBGM(lobbyBgm);
     }
 
     public void ToggleSfx()
@@ -31,14 +31,6 @@ public class SetUpWindow : MonoBehaviour
         DataManager_PGW.instance.gameSettingData.SfxOn = sfxToggle.isOn;
 
 
-    }
-    public void OpenSetUp()
-    {
-        SetUp.SetActive(true);
-    }
-    public void CloseSetUp()
-    {
-        SetUp.SetActive(false);
     }
 
 }

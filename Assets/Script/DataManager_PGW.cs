@@ -11,7 +11,7 @@ public struct PlayerStat
 {
     public int jumpCount;
     public float jumpPower;
-    public float windForce;
+    public float itemPower;
     public float gravity;
     public float LevitationDuration;
 }

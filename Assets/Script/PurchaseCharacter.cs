@@ -7,9 +7,9 @@ using TMPro;
 public class PurchaseCharacter : MonoBehaviour
 {
     [SerializeField] private int cost = 0;
-    [SerializeField] private CharacterList character;
-    [SerializeField] private Button purchaseButton;
-    [SerializeField] private TextMeshProUGUI costText;
+    [SerializeField] private CharacterList character = CharacterList.StandardBird;
+    [SerializeField] private Button purchaseButton = null;
+    [SerializeField] private TextMeshProUGUI costText = null;
     private bool IsUnlock => DataManager_PGW.instance.characterUnlockData.CharacterUnlockState[(int)character];
 
     private ITrade[] trade;

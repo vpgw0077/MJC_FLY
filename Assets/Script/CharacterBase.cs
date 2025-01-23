@@ -6,12 +6,15 @@ public class CharacterBase : MonoBehaviour
 {
     [SerializeField] private LayerMask layer;
     [SerializeField] protected PlayerStat playerStat;
-    [SerializeField] protected GameObject magnetZone;
+    [SerializeField] protected GameObject magnetZone = null;
+    [SerializeField] protected AudioClip jumpSound = null;
 
     protected Vector3 moveDirection = Vector3.zero;
     protected bool isGround = true;
 
-    protected float currentCoolDown = 0;
+    protected float itemJumpCoolDown = 0.5f;
+    [SerializeField] protected float currentItemJumpCoolDown = 0;
+    [SerializeField] protected float currentCoolDown = 0;
 
     protected float currentMagnetTime = 0;
     protected float magnetRange = 5f;
@@ -19,9 +22,10 @@ public class CharacterBase : MonoBehaviour
 
 
     protected bool isJumping = false;
+    [SerializeField] protected bool isItemJumping = false;
 
     protected Rigidbody2D rb = null;
-    private void Start()
+    private void Awake()
     {
         Init();
     }
@@ -31,41 +35,55 @@ public class CharacterBase : MonoBehaviour
         playerStat.gravity += DataManager_PGW.instance.gravityData.additionalAbility[DataManager_PGW.instance.playerData.grade_Gravity];
         playerStat.LevitationDuration += DataManager_PGW.instance.LevitationDurationData.additionalAbility[DataManager_PGW.instance.playerData.grade_LevitationDuration];
         playerStat.jumpPower += DataManager_PGW.instance.jumpPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_JumpPower];
+        playerStat.itemPower += DataManager_PGW.instance.itemPowerData.additionalAbility[DataManager_PGW.instance.playerData.grade_ItemPower];
         rb = GetComponent<Rigidbody2D>();
 
     }
     void Update()
     {
         CheckGround();
-
+        LimitVelocity();
+        CalculateJumpCoolDown();
     }
-    private void FixedUpdate()
+    private void CalculateJumpCoolDown()
     {
-        if (!isGround && !isJumping)
-        {
-            rb.velocity = new Vector2(0, playerStat.gravity);
-        }
         if (isJumping)
         {
-            Jump();
+            currentCoolDown += Time.deltaTime;
+            if (currentCoolDown >= playerStat.LevitationDuration)
+            {
+                currentCoolDown = 0;
+                isJumping = false;
+            }
+        }
+
+        if (isItemJumping)
+        {
+            currentItemJumpCoolDown += Time.deltaTime;
+            if (currentItemJumpCoolDown >= itemJumpCoolDown)
+            {
+                currentItemJumpCoolDown = 0;
+                isItemJumping = false;
+
+            }
         }
     }
-    protected virtual void Jump()
+    private void LimitVelocity()
     {
-        rb.velocity = Vector3.zero;
-        rb.velocity = Vector2.up * playerStat.jumpPower * Time.fixedDeltaTime;
-        currentCoolDown += Time.deltaTime;
-        if (currentCoolDown >= playerStat.LevitationDuration)
+        if (rb.velocity.y < -10)
         {
-            currentCoolDown = 0;
-            isJumping = false;
+            float velY = Mathf.Clamp(rb.velocity.y, -10f, float.MaxValue);
+            rb.velocity = new Vector2(rb.velocity.x, velY);
         }
     }
 
     public void CollideItem()
     {
-        rb.velocity = Vector3.zero;
-        rb.velocity = Vector2.up * playerStat.jumpPower;
+        if (isItemJumping) return;
+        isItemJumping = true;
+        SoundManager.instance.PlaySE(jumpSound);
+        rb.AddForce(Vector2.up * playerStat.itemPower, ForceMode2D.Force);
+
     }
 
     public void ActivateMagnet()
@@ -94,9 +112,13 @@ public class CharacterBase : MonoBehaviour
     }
     public void ReadyToJump()
     {
+        if (isJumping) return;
+
         if (playerStat.jumpCount > 0)
         {
             isJumping = true;
+            SoundManager.instance.PlaySE(jumpSound);
+            rb.AddForce(Vector2.up * playerStat.jumpPower, ForceMode2D.Force);
             playerStat.jumpCount--;
 
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8015294307688373122}
   - component: {fileID: 6361909903292194959}
   - component: {fileID: 2998636869761918794}
+  - component: {fileID: -9211201069557528065}
   m_Layer: 9
   m_Name: Magnet
   m_TagString: Magnet
@@ -141,3 +142,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301ddbc4bbfcef947b38d32c945a7c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-9211201069557528065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8015294307688373148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa01c45470910444b78fc40c2ef182f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemSound: {fileID: 8300000, guid: 2aa37d864b9ecc641ba6250c5cb96a6f, type: 3}

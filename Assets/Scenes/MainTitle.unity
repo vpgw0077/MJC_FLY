@@ -3719,15 +3719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81002b934ad2b041a91f588be95e7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bgm:
-    soundName: FLY_BGM
-    clip: {fileID: 8300000, guid: 69aef461d54d4d5499beb1576839607d, type: 3}
   bgmPlayer: {fileID: 988763398}
-  SfxSounds:
-  - soundName: Coin
-    clip: {fileID: 8300000, guid: 2aa37d864b9ecc641ba6250c5cb96a6f, type: 3}
-  - soundName: Jump
-    clip: {fileID: 8300000, guid: a7236022772d1dc419a29760f6b7ddcb, type: 3}
   sfxPlayer:
   - {fileID: 988763404}
   - {fileID: 988763403}
@@ -6094,6 +6086,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2100231117}
+        m_MethodName: OpenPage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 194906146}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1299237247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6143,52 +6146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca94fd3b676d1a439d04e72ad124e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SetUp: {fileID: 194906146}
   bgmToggle: {fileID: 1943386337}
   sfxToggle: {fileID: 1420201325}
---- !u!1 &1313496869
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1313496871}
-  - component: {fileID: 1313496870}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1313496870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313496869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416b1b22e9f212d4897f5364c03b7bfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1313496871
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313496869}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 337.7187, y: 988.30896, z: -117.87712}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  lobbyBgm: {fileID: 8300000, guid: 69aef461d54d4d5499beb1576839607d, type: 3}
 --- !u!1 &1325070040
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,7 +6185,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -6266,7 +6226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325070040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7156,12 +7116,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1299237249}
-        m_MethodName: CloseSetUp
-        m_Mode: 1
+      - m_Target: {fileID: 2100231117}
+        m_MethodName: ClosePage
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 194906146}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10499,7 +10459,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: -0.0006713867}
   m_SizeDelta: {x: 0, y: -470.00012}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &8940784002233724227
@@ -10514,7 +10474,6 @@ GameObject:
   - component: {fileID: 8940784002233724231}
   - component: {fileID: 8940784002233724228}
   - component: {fileID: 8940784002233724229}
-  - component: {fileID: 8940784002233724230}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -10542,7 +10501,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10550,7 +10509,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.01
 --- !u!114 &8940784002233724229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10575,20 +10534,6 @@ MonoBehaviour:
   m_Spacing: {x: 620, y: 250}
   m_Constraint: 0
   m_ConstraintCount: 4
---- !u!114 &8940784002233724230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8940784002233724227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 1
 --- !u!222 &8940784002233724231
 CanvasRenderer:
   m_ObjectHideFlags: 0

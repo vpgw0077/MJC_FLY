@@ -9,6 +9,7 @@ public class InGameManager : MonoBehaviour
     [SerializeField] private Text resultCoin = null;
     [SerializeField] private Text currentCoinText = null;
     [SerializeField] private int currentCoin = 0;
+    [SerializeField] private AudioClip bgm = null;
 
     private CollisionEvent collisionEvent = null;
     // Start is called before the first frame update
@@ -16,6 +17,7 @@ public class InGameManager : MonoBehaviour
     private void Start()
     {
         InitGame();
+        SoundManager.instance.PlayBGM(bgm);
         collisionEvent = FindObjectOfType<CollisionEvent>();
         if (collisionEvent != null)
         {
@@ -36,6 +38,7 @@ public class InGameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Time.timeScale = 0;
         resultPanel.SetActive(true);
         resultCoin.text = " X " + currentCoin.ToString();
         DataManager_PGW.instance.playerData.totalCoin += currentCoin;

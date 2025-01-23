@@ -3,20 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[System.Serializable]
-public class Sound
-{
-    public string soundName;
-    public AudioClip clip;
-}
+
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance = null;
 
-    public Sound Bgm;
     public AudioSource bgmPlayer;
 
-    public Sound[] SfxSounds;
     public AudioSource[] sfxPlayer;
 
     void Awake()
@@ -33,39 +26,29 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
-    {
-        PlayBGM();
-    }
-
-    public void PlaySE(string _soundName)
+    public void PlaySE(AudioClip clip)
     {
         if (DataManager_PGW.instance.gameSettingData.SfxOn)
         {
-            for (int i = 0; i < SfxSounds.Length; i++)
+
+            for (int i = 0; i < sfxPlayer.Length; i++)
             {
-                if (_soundName == SfxSounds[i].soundName)
+                if (!sfxPlayer[i].isPlaying)
                 {
-                    for (int x = 0; x < sfxPlayer.Length; x++)
-                    {
-                        if (!sfxPlayer[x].isPlaying)
-                        {
-                            sfxPlayer[x].clip = SfxSounds[i].clip;
-                            sfxPlayer[x].Play();
-                            return;
-                        }
-                    }
+                    sfxPlayer[i].clip = clip;
+                    sfxPlayer[i].Play();
                     return;
                 }
             }
+            
         }
     }
 
-    public void PlayBGM()
+    public void PlayBGM(AudioClip clip)
     {
         if (DataManager_PGW.instance.gameSettingData.BgmOn)
         {
-            bgmPlayer.clip = Bgm.clip;
+            bgmPlayer.clip = clip;
             bgmPlayer.Play();
 
         }

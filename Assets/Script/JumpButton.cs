@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class JumpButton : MonoBehaviour
 {
-    Button btn;
-    CharacterBase thePlayer;
+    private Button btn = null;
+    private CharacterBase thePlayer = null;
     // Start is called before the first frame update
     void Start()
     {
