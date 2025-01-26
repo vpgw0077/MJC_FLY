@@ -42,4 +42,5 @@ public class ShopManager : MonoBehaviour, ITrade
     {
         tradeFailUI.SetActive(true);
     }
+
 }

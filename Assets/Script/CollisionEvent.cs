@@ -6,13 +6,9 @@ public class CollisionEvent : MonoBehaviour
 {
     public delegate void ExecuteEvent();
     public event ExecuteEvent gameOverEvent;
+    public event ExecuteEvent itemEvent;
+    public event ExecuteEvent magnetEvent;
 
-    private CharacterBase player = null;
-
-    private void Start()
-    {
-        player = GetComponentInParent<CharacterBase>();
-    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Ground"))
@@ -25,12 +21,12 @@ public class CollisionEvent : MonoBehaviour
     {
         if (collision.CompareTag("Item"))
         {
-            player.CollideItem();
+            itemEvent?.Invoke();
         }
 
         if (collision.CompareTag("Magnet"))
         {
-            player.ActivateMagnet();
+            magnetEvent?.Invoke();
         }
     }
 }

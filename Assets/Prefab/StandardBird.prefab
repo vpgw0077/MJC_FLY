@@ -11,8 +11,12 @@ GameObject:
   - component: {fileID: 4582990869649274032}
   - component: {fileID: 4582990869649274039}
   - component: {fileID: 3686746207666881800}
+  - component: {fileID: 6877989275972617882}
   - component: {fileID: 6165111885640273122}
+  - component: {fileID: 2803182581818046638}
   - component: {fileID: 8030694239406291223}
+  - component: {fileID: 9221109492445386009}
+  - component: {fileID: 5964263956372256792}
   m_Layer: 10
   m_Name: StandardBird
   m_TagString: Player
@@ -105,6 +109,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6877989275972617882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582990869649274043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8dae99473574884b89b1e898e7df7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStat:
+    jumpCount: 1
+    jumpPower: 750
+    itemPower: 750
+    gravity: -10
+    LevitationDuration: 2
 --- !u!114 &6165111885640273122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,20 +139,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c5fe58ba8c1424d8e85b70ddc605d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer:
-    serializedVersion: 2
-    m_Bits: 12288
-  playerStat:
-    jumpCount: 1
-    jumpPower: 750
-    itemPower: 1000
-    gravity: -6
-    LevitationDuration: 3
-  magnetZone: {fileID: 5533166034208679791}
-  jumpSound: {fileID: 8300000, guid: a7236022772d1dc419a29760f6b7ddcb, type: 3}
-  currentItemJumpCoolDown: 0
-  currentCoolDown: 0
-  isItemJumping: 0
+--- !u!114 &2803182581818046638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582990869649274043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b700c901d07094cb5316d9a7b5f6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &8030694239406291223
 Rigidbody2D:
   serializedVersion: 4
@@ -152,6 +172,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &9221109492445386009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582990869649274043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f117563519aee64ea7057a0205206e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnetZone: {fileID: 5533166034208679791}
+--- !u!114 &5964263956372256792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582990869649274043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46995943f006a3c4ea3b24eb422d521d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <jumpSound>k__BackingField: {fileID: 8300000, guid: a7236022772d1dc419a29760f6b7ddcb,
+    type: 3}
 --- !u!1 &5533166034208679791
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +269,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4605421759020794446}
   - component: {fileID: 6828395980993836820}
-  - component: {fileID: 7508368898915241233}
   m_Layer: 10
   m_Name: Dectect
   m_TagString: Player
@@ -260,15 +306,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
---- !u!114 &7508368898915241233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099912820026118791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b700c901d07094cb5316d9a7b5f6cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
