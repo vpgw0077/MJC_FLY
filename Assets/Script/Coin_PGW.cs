@@ -7,12 +7,12 @@ public class Coin_PGW : Item
 {
     [SerializeField] private int coinAmount = 10;
 
-    private InGameManager inGameManager = null;
+    private InGameRecorder inGameRecorder = null;
 
     protected override void Awake()
     {
         base.Awake();
-        inGameManager = FindObjectOfType<InGameManager>();
+        inGameRecorder = FindObjectOfType<InGameRecorder>();
     }
 
 
@@ -20,7 +20,7 @@ public class Coin_PGW : Item
     {
         if (collision.CompareTag("Player"))
         {
-            inGameManager.UpdateCoin(coinAmount);
+            inGameRecorder.UpdateCoin(coinAmount);
             SoundManager.instance.PlaySE(itemSound);
             gameObject.SetActive(false);
         }

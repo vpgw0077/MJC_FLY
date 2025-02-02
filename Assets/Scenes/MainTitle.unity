@@ -6438,7 +6438,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uCF54\uC778\uC774 \uBD80\uC871\uD569\uB2C8\uB2E4!\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f91dcc6f6c9ba1c4eaa5c2f3c2d6e42e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7013588ebe117664ea8fab6fd86a88c1, type: 2}
   m_sharedMaterial: {fileID: 2058462090859624916, guid: f91dcc6f6c9ba1c4eaa5c2f3c2d6e42e,
     type: 2}
   m_fontSharedMaterials: []
@@ -6503,7 +6503,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1352454668

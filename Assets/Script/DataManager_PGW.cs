@@ -42,6 +42,7 @@ public class PlayerData
     public int grade_Gravity = 0;
     public int grade_ItemPower = 0;
     public int grade_LevitationDuration = 0;
+    public float distanceRecord = 0;
     public CharacterList currentCharacter = CharacterList.StandardBird;
 
 }

@@ -6,9 +6,9 @@ public class CollisionEvent : MonoBehaviour
 {
     public delegate void ExecuteEvent();
     public event ExecuteEvent gameOverEvent;
+    public event ExecuteEvent gameStartEvent;
     public event ExecuteEvent itemEvent;
     public event ExecuteEvent magnetEvent;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Ground"))
@@ -27,6 +27,11 @@ public class CollisionEvent : MonoBehaviour
         if (collision.CompareTag("Magnet"))
         {
             magnetEvent?.Invoke();
+        }
+
+        if (collision.CompareTag("StartTrigger"))
+        {
+            gameStartEvent?.Invoke();
         }
     }
 }
