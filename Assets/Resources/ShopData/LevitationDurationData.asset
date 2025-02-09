@@ -15,9 +15,9 @@ MonoBehaviour:
   cost: 64000000c8000000900100002003000040060000ffffff7f
   additionalAbility:
   - 0
-  - 0.1
-  - 0.2
-  - 0.3
-  - 0.4
-  - 0.5
+  - -0.2
+  - -0.4
+  - -0.6
+  - -0.8
+  - -1
   maximumGrade: 5

@@ -75,7 +75,7 @@ public class InGameRecorder : MonoBehaviour
         gameStartTrigger.SetActive(false);
     }
 
-    private void ShowResult()
+    public void ShowResult()
     {
         resultPanel.SetActive(true);
         canvasGroup.blocksRaycasts = false;

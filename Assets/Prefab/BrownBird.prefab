@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4655910066067153805}
   - component: {fileID: 6403350198172980537}
-  - component: {fileID: 7485545095080603538}
   m_Layer: 10
   m_Name: Detect
   m_TagString: Player
@@ -48,18 +47,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
---- !u!114 &7485545095080603538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1680358284642261859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b700c901d07094cb5316d9a7b5f6cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8358908632588455213
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,6 +59,10 @@ GameObject:
   - component: {fileID: 8358908632588455201}
   - component: {fileID: 7322052278133647053}
   - component: {fileID: 1972557718056513449}
+  - component: {fileID: 1103429498831782629}
+  - component: {fileID: 32782113333850169}
+  - component: {fileID: 104149236839783955}
+  - component: {fileID: 5060374878365107442}
   m_Layer: 0
   m_Name: BrownBird
   m_TagString: Player
@@ -157,17 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c5fe58ba8c1424d8e85b70ddc605d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer:
-    serializedVersion: 2
-    m_Bits: 12288
-  playerStat:
-    jumpCount: 2
-    jumpPower: 10
-    itemPower: 0
-    gravity: -30
-    LevitationDuration: 0.5
-  magnetZone: {fileID: 8488577723692337124}
-  jumpSound: {fileID: 8300000, guid: a7236022772d1dc419a29760f6b7ddcb, type: 3}
 --- !u!50 &1972557718056513449
 Rigidbody2D:
   serializedVersion: 4
@@ -183,12 +163,69 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1103429498831782629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358908632588455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8dae99473574884b89b1e898e7df7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStat:
+    jumpCount: 2
+    jumpPower: 700
+    itemPower: 750
+    gravity: -10
+    LevitationDuration: 2
+--- !u!114 &32782113333850169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358908632588455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46995943f006a3c4ea3b24eb422d521d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <jumpSound>k__BackingField: {fileID: 8300000, guid: a7236022772d1dc419a29760f6b7ddcb,
+    type: 3}
+--- !u!114 &104149236839783955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358908632588455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f117563519aee64ea7057a0205206e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnetZone: {fileID: 8488577723692337124}
+--- !u!114 &5060374878365107442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358908632588455213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07b700c901d07094cb5316d9a7b5f6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8488577723692337124
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +237,7 @@ GameObject:
   - component: {fileID: 3041456362453016788}
   - component: {fileID: 6755795792100386519}
   - component: {fileID: 3354586193733268165}
+  - component: {fileID: 3407637287717313060}
   m_Layer: 8
   m_Name: MagnetZone
   m_TagString: MagnetZone
@@ -249,3 +287,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!50 &3407637287717313060
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488577723692337124}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
