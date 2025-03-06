@@ -25,7 +25,6 @@ public class CharacterJump : MonoBehaviour
         CalculateJumpCoolDown();
     }
 
-    // 일반 점프 캐릭터마다 다르게 구현될 수 있게
     public virtual void CalculateJumpCoolDown(float levitationDuration)
     {
         if (isJumping)
@@ -39,8 +38,7 @@ public class CharacterJump : MonoBehaviour
         }
     }
 
-    // 아이템과 닿았을 때 점프
-    private void CalculateJumpCoolDown()
+    protected virtual void CalculateJumpCoolDown()
     {
 
         if (isItemJumping)
@@ -61,7 +59,7 @@ public class CharacterJump : MonoBehaviour
 
     }
 
-    public void Jump(float jumpPower)
+    public virtual void Jump(float jumpPower)
     {
         isJumping = true;
         rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Force);
