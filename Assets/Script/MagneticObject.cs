@@ -5,7 +5,7 @@ using UnityEngine;
 public class MagneticObject : MonoBehaviour
 {
     private bool magnetOn = false;
-    private float moveSpeed = 20f;
+    private float moveSpeed = 40f;
     private Vector3 target = Vector3.zero;
 
     // Start is called before the first frame update

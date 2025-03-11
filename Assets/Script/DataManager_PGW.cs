@@ -88,7 +88,7 @@ public class DataManager_PGW : MonoBehaviour
         itemPowerData = Resources.Load<AbilityPurchaseData>("ShopData/ItemPowerData");
         LevitationDurationData = Resources.Load<AbilityPurchaseData>("ShopData/LevitationDurationData");
 
-        dataFilePath = Application.persistentDataPath + "/save/";
+        dataFilePath = Application.persistentDataPath;
         LoadData();
 
     }
