@@ -34,6 +34,6 @@
 - 코인
   <details>
   <summary>이미지</summary>
-  접은 내용(ex 소스 코드)
+  <img src="(https://github.com/user-attachments/assets/bcc36dae-8087-4c9e-a7da-e7cdc31626b4)" width="100" height="100"/>
   </details>
 
