@@ -31,4 +31,9 @@
 - ${\textsf{\color{brown}미니맵}}$ - 플레이어의 현재 위치(높이)를 보여줍니다.
 
 ### 게임 오브젝트
+- 코인
+  <details>
+  <summary>이미지</summary>
+  접은 내용(ex 소스 코드)
+  </details>
 
