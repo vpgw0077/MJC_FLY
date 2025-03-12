@@ -31,10 +31,18 @@
 - ${\textsf{\color{brown}미니맵}}$ - 플레이어의 현재 위치(높이)를 보여줍니다.
 
 ### 게임 오브젝트
-- 코인 - 게임 재화로 플레이어와 충돌하면 얻을 수 있습니다.
+- 코인 - 게임 재화로 충돌하면 얻을 수 있습니다.
   <details>
   <summary>이미지</summary>
   <img src="https://github.com/user-attachments/assets/bcc36dae-8087-4c9e-a7da-e7cdc31626b4" width="100" height="100"/>
   </details>
-
-
+- 자석 - 획득 시 5초동안 주변의 아이템을 끌어들입니다.
+  <details>
+  <summary>이미지</summary>
+  <img src="https://github.com/user-attachments/assets/f9651261-fba0-4129-8318-578cae3140ff" width="100" height="100"/>
+  </details>
+- 구름 - 닿으면 남아있는 점프 횟수가 상관없이 점프시키고 상점에서 업그레이드 할 수 있습니다.
+  <details>
+  <summary>이미지</summary>
+  <img src="https://github.com/user-attachments/assets/5ebb9723-302f-429a-84c6-fbafa6e1f8e2" width="100" height="100"/>
+  </details>
