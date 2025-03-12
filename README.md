@@ -31,9 +31,10 @@
 - ${\textsf{\color{brown}미니맵}}$ - 플레이어의 현재 위치(높이)를 보여줍니다.
 
 ### 게임 오브젝트
-- 코인
+- 코인 - 게임 재화로 플레이어와 충돌하면 얻을 수 있습니다.
   <details>
   <summary>이미지</summary>
-  <img src="(https://github.com/user-attachments/assets/bcc36dae-8087-4c9e-a7da-e7cdc31626b4)" width="100" height="100"/>
+  <img src="https://github.com/user-attachments/assets/bcc36dae-8087-4c9e-a7da-e7cdc31626b4" width="100" height="100"/>
   </details>
+
 
