@@ -48,3 +48,10 @@
   </details>
 
 ### 상점
+![Image](https://github.com/user-attachments/assets/e6b0aca8-97cb-458d-885a-1156a28c4076)
+![Image](https://github.com/user-attachments/assets/fe50ba07-1f58-401c-9afe-a0a1fd0dabc5)
+
+### 캐릭터 상점
+- 캐릭터를 구매하고 선택할 수 있습니다.
+- 캐릭터 별로 각기 다른 능력치와 능력을 갖도록 설계했습니다.
+- 캐릭터 선택 기능은 [외부 에셋](https://assetstore.unity.com/packages/tools/utilities/serialized-dictionary-243052)(딕셔너리 직렬화)을 활용해 구현했습니다.
