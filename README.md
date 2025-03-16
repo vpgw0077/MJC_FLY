@@ -46,3 +46,5 @@
   <summary>이미지</summary>
   <img src="https://github.com/user-attachments/assets/5ebb9723-302f-429a-84c6-fbafa6e1f8e2" width="100" height="100"/>
   </details>
+
+### 상점
