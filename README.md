@@ -55,3 +55,28 @@
 - 캐릭터를 구매하고 선택할 수 있습니다.
 - 캐릭터 별로 각기 다른 능력치와 능력을 갖도록 설계했습니다.
 - 캐릭터 선택 기능은 [외부 에셋](https://assetstore.unity.com/packages/tools/utilities/serialized-dictionary-243052)(딕셔너리 직렬화)을 활용해 구현했습니다.
+- [캐릭터 구매 코드](https://github.com/vpgw0077/MJC_FLY/blob/master/Assets/Script/PurchaseCharacter.cs), [데이터 매니저 코드](https://github.com/vpgw0077/MJC_FLY/blob/master/Assets/Script/DataManager_PGW.cs)
+
+### 능력 상점
+- 캐릭터의 5가지 기본 능력을 업그레이드 할 수 있습니다.
+- 능력별 업그레이드 정보는 스크립터블 오브젝트로 구현했습니다.
+- [능력 데이터](https://github.com/vpgw0077/MJC_FLY/blob/master/Assets/Script/AbilityPurchaseData.cs), [능력 업그레이드 코드](https://github.com/vpgw0077/MJC_FLY/blob/master/Assets/Script/AbilityUpgrade.cs)
+1. 점프 횟수 증가 : 업그레이드 당 점프 횟수 +1 <br>
+   최대 업그레이드 단계 : 5 <br>
+   단계별 비용 : 100코인 -> 200코인 -> 400코인 -> 800코인 -> 1600코인
+   
+2. 점프 파워 증가 : 업그레이드를 할수록 점프 파워 증가 <br>
+   최대 업그레이드 단계 : 5 <br>
+   단계별 비용 : 100코인 -> 200코인 -> 400코인 -> 800코인 -> 1600코인
+   
+3. 점프 쿨타임 감소 : 업그레이드를 할수록 점프 쿨타임이 감소함 <br>
+   최대 업그레이드 단계 : 5 <br>
+   단계별 비용 : 100코인 -> 200코인 -> 400코인 -> 800코인 -> 1600코인
+
+4. 비행 강화 : 업그레이드를 할수록 공중에서 캐릭터가 더 천천히 떨어짐 <br>
+   최대 업그레이드 단계 : 5 <br>
+   단계별 비용 : 100코인 -> 200코인 -> 400코인 -> 800코인 -> 1600코인
+
+5. 구름 아이템 파워 증가 : 업그레이드를 할수록 구름 아이템의 파워가 증가함 <br>
+   최대 업그레이드 단계 : 5 <br>
+   단계별 비용 : 100코인 -> 200코인 -> 400코인 -> 800코인 -> 1600코인
